@@ -13,31 +13,45 @@ package Sorting;
 //Explanation: Here the size of the array is 4, so the range will be [1, 5]. The missing number between 1 to 5 is 4
 
 
+import java.util.Arrays;
+
 //-----/::) MOre code will upload on 29-08-2025
 public class Cyclesort_01 {
-    public static void main(String[] args) {
 
-    }
-    static void  missingNum(int[]arr){
+    static int  missingNum(int[]arr){
         int n = arr.length;
         int i = 0;
         while (i<n){
-            for(int j = 0;j<n; j++){
-                int correct = arr[j];
-                if(arr[j] != arr[i]){
-                    swap(int[] arr, i, correct)
-                } else if () {
-                    
-                }
+            int correctIndex = arr[i]-1;
+            if(arr[i] != arr[correctIndex]){
+                //swap
+                swap(arr, i, correctIndex);
 
+            }else{
+                i++;
             }
         }
+        for(int j = 0; j<n; j++){
+            if(arr[j] != j+1){
+                return j+1;
+            }
+        }
+        return n+1;
 
     }
     static void swap(int[] arr, int i , int correct){
         int temp = arr[i];
         arr[i] = arr[correct];
         arr[correct] = temp;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,5,5,6};
+
+        int missing = missingNum(arr);
+        System.out.println( "Original Arrays:" +  Arrays.toString(arr));
+        System.out.println("Missing Arrays: " + missing);
+
     }
 
 }
