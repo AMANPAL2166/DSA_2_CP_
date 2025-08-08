@@ -28,6 +28,6 @@ public class EqualBracket {
 
     public static void main(String[] args) {
         String s = "))";
-        System.out.println(countSub(str));
+        System.out.println(countSub(s));
     }
 }
