@@ -2,7 +2,7 @@ package Fundamental;
 
 public class Bitwise_OPE {
     public static void main(String[] args) {
-        int a = 0, b = 4;
+        int a = 1024, b = 4;
         AND(a,b);
         // 7 = 111 & 4 = 100
         //   111
@@ -11,6 +11,9 @@ public class Bitwise_OPE {
         OR(a,b);
         XOR(a,b);
         NOT(a);
+        Leftshift(a);
+        Left_Binary(a);
+        RightShift(a, b);
 
 
     }
@@ -54,4 +57,37 @@ public class Bitwise_OPE {
         }
 
     }
+
+    public static void Leftshift(int a) {
+        System.out.println("Left swift: ");
+        System.out.println(a + "<< 1 =" + (a << 1));
+        //Every time we shift a number towards the left by 1 bit it multiply that number by 2.
+
+
+    }
+    //This method for binary converter
+    public static void Left_Binary(int num1) {
+        String bt1 = Integer.toBinaryString(num1);
+        bt1 = String.format("%32s", bt1).replace(' ', '0');
+        System.out.println(bt1);
+        int num2 = num1<<1;
+        String bt2 = Integer.toBinaryString(num2);
+        bt2 = String.format("32s", bt2).replace(' ', '0');
+        System.out.println(bt2);
+        int num3 = num1<<2;
+        String bitset13 = Integer.toBinaryString(num3);
+        bitset13 = String.format("16s", bitset13).replace(' ', '0');
+        System.out.println(bitset13);
+
+
+    }
+
+    public static void RightShift(int s, int num) {
+        System.out.println("Right shift of binary number: ");
+        System.out.println((s>>num) + " Right shift number ");
+        //Note: Every time we shift a number towards the right by 1 bit it divides that number by 2.
+
+    }
+
+
 }
