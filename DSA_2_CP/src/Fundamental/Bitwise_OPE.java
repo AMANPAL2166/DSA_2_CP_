@@ -2,7 +2,7 @@ package Fundamental;
 
 public class Bitwise_OPE {
     public static void main(String[] args) {
-        int a = 1024, b = 4;
+        int a = 13, b = 2;
         AND(a,b);
         // 7 = 111 & 4 = 100
         //   111
@@ -14,6 +14,10 @@ public class Bitwise_OPE {
         Leftshift(a);
         Left_Binary(a);
         RightShift(a, b);
+        System.out.println("Set number: "+set(a,b));
+        System.out.println("Unset number: " + unset_clear(a,b));
+        System.out.println("Toggle of a number: "+ toogle(a,b));
+        System.out.println("At position: " + at_position(a,b));
 
 
     }
@@ -88,6 +92,40 @@ public class Bitwise_OPE {
         //Note: Every time we shift a number towards the right by 1 bit it divides that number by 2.
 
     }
+    //How to set a bit in the number?
+    //If we want to set a bit at nth position in the number 'num', it can be done using the 'OR' operator
+    //(| ).
+    // First we left shift 1 to n position via (1<<n)
+    //Then, use the "OR" operator to set the bit at the position. "OR" operator is used because it will set the bit
+    // even  if the bit is unset previously in ths binary representation of the number 'num'.
+
+    //If the bit would be already set then it would remain unchanged.
+    public static int  set(int num, int pas ) {
+        /// First step shift' 1', second
+        //step is bitwise "OR"
+        num |= (1<<pas);
+        return num;
+
+    }
+    // How to unset/clear a bit at n'th position in the number
+    public static int  unset_clear(int num, int pass) {
+        num = num & ~(1<<pass);
+        return num;
+
+    }
+    // Toggling a bit at nth position
+    public static int  toogle(int num, int pos) {
+        //first step to shift 1, then 2nd step is to XOR with given number
+        num ^=(1<<pos);
+        return num;
+
+    }
+    /// Checking if the bit at nth position is Set or Unset
+    public static int at_position(int num, int pos) {
+        int bit = num & (1<<pos);
+        return bit;
 
 
-}
+    }
+
+ }
