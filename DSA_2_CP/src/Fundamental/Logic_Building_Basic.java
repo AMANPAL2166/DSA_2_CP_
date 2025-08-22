@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Logic_Building_Basic {
     public static void main(String[] args) {
-        int s = 13, a =4;
+        int s = 1, a =20;
         System.out.println("Check even or odd: "+even_odd(s));
         System.out.println("Sum of natural number: "+ sumof_Naturalnum(s));
         System.out.println("Square of n natural number: " + sumOf_squr(s));
@@ -15,6 +15,8 @@ public class Logic_Building_Basic {
         System.out.println( "Closest number: " + closestNumber(s,a));
         System.out.println( "Closest number: " + closestNumber2(s,a));
         System.out.println("Opposite disc: " + Oppositeface_disc(a));
+        System.out.println("This number is prime or not if prime then print true otherwise false: " + isPrime(s));
+        System.out.println("power check; " + powercheck(1,20));
 
     }
     public static boolean even_odd(int n){
@@ -104,5 +106,29 @@ public class Logic_Building_Basic {
         else if(n==5) ans = 2;
         else ans = 1;
         return ans;
+    }
+    static boolean isPrime(int n){
+        if(n<=1){return false;}
+        if(n == 2 || n == 3  ){ return true;}
+        // if n is <=1, and divided by 2 and 3 then it is not prime
+        if(n<=0 || n%2 == 0 || n%3==0){return false;}
+        //to check through all number of the form 6k+-1
+        for(int i = 5; i*i <=n; i++){
+            if(n%i ==0 || n%(i+2)==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean powercheck(int x, long y) {
+        if(x==1){ return (y==1);}
+        //repetadely compute x power
+        long pow = 1;
+        while(pow<y)
+            pow *=x;
+        //check if power of x become y;
+         return (pow==y);
+
     }
 }
