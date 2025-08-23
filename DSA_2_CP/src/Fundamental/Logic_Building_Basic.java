@@ -17,6 +17,10 @@ public class Logic_Building_Basic {
         System.out.println("Opposite disc: " + Oppositeface_disc(a));
         System.out.println("This number is prime or not if prime then print true otherwise false: " + isPrime(s));
         System.out.println("power check; " + powercheck(1,20));
+        System.out.println (check_valid_tri( 7,10,5));
+        System.out.println(countPairs(9));
+        System.out.println(pairCubeCount_Opt(28));
+
 
     }
     public static boolean even_odd(int n){
@@ -130,5 +134,40 @@ public class Logic_Building_Basic {
         //check if power of x become y;
          return (pow==y);
 
+    }
+
+    public static boolean  check_valid_tri(int a, int b, int c) {
+        if(a+b<=c || a+c<= b || b+c<=a){
+            return false;
+        }else{ return true;}
+
+    }
+    static int countPairs(int n) {//this is brute force of count pair of a number
+         int count = 0;
+         for(int a = 1; a<=n;a++){
+             for(int b = 0; b<=0; b++){
+                 if(a*a*a+b*b*b== n){
+                     count++;
+                 }
+             }
+         }
+         return count;
+    }
+    //now I  want to optimize this sol^n;
+    static int pairCubeCount_Opt(int n){
+        int count = 0;
+        for(int i = 1; i<=Math.cbrt(n);i++){
+            int cb = i*i*i;//store cube of the number
+            int diff = n-cb;//substract the cube from given number
+            //check if difference is also a perfect cube
+            int cbrtDiff = (int) Math.cbrt(diff);
+            //If yes then increase count
+            if(cbrtDiff*cbrtDiff*cbrtDiff == diff){
+                count++;
+            }
+
+
+        }
+        return count;
     }
 }
