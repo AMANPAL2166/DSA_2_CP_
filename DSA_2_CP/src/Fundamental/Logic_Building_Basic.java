@@ -23,6 +23,8 @@ public class Logic_Building_Basic {
         System.out.println("Method second to find LCM with better space complexity:::"+"LCM of " + s + " and " +a+ " = " + lcm(s,a));
         System.out.println("Perfect divisor: " + Divise_Perfect(a));
         System.out.println("Second method to find "+ "Perfect divisor: "+ isPerfect(a));
+        add_fraction(1,3,1,5);
+
 
 
 
@@ -216,5 +218,12 @@ public class Logic_Building_Basic {
         }
         //If sum is divisor is equal to n, then n is a perfect number
         return sum == n && n != 1;
+    }
+    static void add_fraction(int num1, int den1, int num2, int den2nd){
+        int lcm = LCM_find(den1,den2nd);
+        int first = lcm/den1;
+        int sec = lcm/den2nd;
+        int ans = (first + sec)%lcm;
+        System.out.println(ans);
     }
 }
