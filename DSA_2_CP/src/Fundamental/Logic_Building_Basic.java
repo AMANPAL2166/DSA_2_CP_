@@ -5,13 +5,12 @@ import java.util.List;
 
 public class Logic_Building_Basic {
     public static void main(String[] args) {
-        int s = 1, a =20;
+        int s = 3, a =33;
         System.out.println("Check even or odd: "+even_odd(s));
         System.out.println("Sum of natural number: "+ sumof_Naturalnum(s));
         System.out.println("Square of n natural number: " + sumOf_squr(s));
         swap(s,a);
         System.out.println(" Swap a and b using XOR : " + get(s,a));
-
         System.out.println( "Closest number: " + closestNumber(s,a));
         System.out.println( "Closest number: " + closestNumber2(s,a));
         System.out.println("Opposite disc: " + Oppositeface_disc(a));
@@ -20,6 +19,11 @@ public class Logic_Building_Basic {
         System.out.println (check_valid_tri( 7,10,5));
         System.out.println(countPairs(9));
         System.out.println(pairCubeCount_Opt(28));
+        System.out.println("LCM of " + s + " and " +a+ " = " + LCM_find(s,a));
+        System.out.println("Method second to find LCM with better space complexity:::"+"LCM of " + s + " and " +a+ " = " + lcm(s,a));
+        System.out.println("Perfect divisor: " + Divise_Perfect(a));
+        System.out.println("Second method to find "+ "Perfect divisor: "+ isPerfect(a));
+
 
 
     }
@@ -165,9 +169,52 @@ public class Logic_Building_Basic {
             if(cbrtDiff*cbrtDiff*cbrtDiff == diff){
                 count++;
             }
-
-
         }
         return count;
+    }
+
+    public static int  LCM_find(int a, int b) {
+        int g = Math.max(a,b);
+        int s = Math.min(a,b);
+        for(int i = g; i<= a*b; i+=g){
+            if(i % s ==0){
+                return i;
+            }
+        }
+        return a*b;
+
+    }
+    // Method 2nd to find
+    static int gcd(int a, int b){
+        return (b==0) ? a: gcd(b, a%b);
+    }
+    static int lcm(int a, int b){
+        return (a/gcd(a,b))*b;
+    }
+
+    public static int Divise_Perfect(int n) {
+        int sum = 0;
+        for(int i = 1; i<n; i++){
+            if(n%i == 0){
+                sum += i;
+            }
+        }
+        return sum ;
+    }
+    //Optimize method
+    public static boolean isPerfect(int n){
+        int sum = 1; // We start from 1 because 1 is a division of whole number::
+        for(int i = 2; i*i <= n; i++ ){
+            if(n % i == 0){
+                if(i*i != 0){
+                    sum = sum +i +n/i;
+                }else{
+                    sum =sum + i;
+
+                }
+            }
+        }
+        //If sum is divisor is equal to n, then n is a perfect number
+        return sum == n && n != 1;
     }
 }
