@@ -24,9 +24,8 @@ public class Logic_Building_Basic {
         System.out.println("Perfect divisor: " + Divise_Perfect(a));
         System.out.println("Second method to find "+ "Perfect divisor: "+ isPerfect(a));
         add_fraction(1,3,1,5);
-
-
-
+        System.out.println(getDayOfWeek(15,8,1947));
+        System.out.println("Nth series: "+nthseries(3));
 
     }
     public static boolean even_odd(int n){
@@ -226,4 +225,37 @@ public class Logic_Building_Basic {
         int ans = (first + sec)%lcm;
         System.out.println(ans);
     }
+    static String getDayOfWeek(int d, int m, int y) {
+        // code here
+        if (m == 1) {
+            m = 13;
+            y -= 1;
+        } else if (m == 2) {
+            m = 14;
+            y -= 1;
+        }
+
+        int q = d;
+        int mon = m;
+        int K = y % 100;
+        int J = y / 100;
+
+        int h = (q + (13 * (m + 1)) / 5 + K + (K / 4) + (J / 4) + 5 * J) % 7;
+
+        String[] days = {"Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
+
+        return days[h];
+    }
+
+    public static int nthseries(int n) {
+        int ans = 0;
+        for(int i = 1;i <=n; i++){
+            ans +=i;
+        }
+        return ans;
+
+    }
+
+
+
 }
