@@ -26,6 +26,7 @@ public class Logic_Building_Basic {
         add_fraction(1,3,1,5);
         System.out.println(getDayOfWeek(15,8,1947));
         System.out.println("Nth series: "+nthseries(3));
+        System.out.println(knthdigit(3,2,1));
 
     }
     public static boolean even_odd(int n){
@@ -255,6 +256,21 @@ public class Logic_Building_Basic {
         return ans;
 
     }
+    static long knthdigit(int a, int b, int k){
+        //Given two numbers a and b, find kth digit from right of a^b.
+        //ex -- Input: a = 3, b = 3, k = 1
+        //Output: 7
+        //Explanation: 33 = 27 and 1st digit from right is 7
+        int result = 1;
+        for(int i = 0; i<b; i++ ){
+            result *= a;
+
+        }
+        return result;
+    }
+
+
+
 
 
 
