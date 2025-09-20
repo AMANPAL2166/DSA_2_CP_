@@ -19,6 +19,8 @@ public class Basic {
         System.out.println("Insert char:-> " + inseartchar2(s1,'c',3));
         System.out.println("Remove character: -> " + removechar("Amaan", 'a'));
         removeCharacter2(sh, 'k');
+        String h = s.substring(0, 4);
+        System.out.println("Substring of:->:" +h);
 
 
     }
