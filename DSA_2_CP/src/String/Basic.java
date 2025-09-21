@@ -3,7 +3,7 @@ package String;
 public class Basic {
     public static void main(String[] args) {
         String s1 = "aman";
-        String s2 = "aman";
+        String s2 = "Aman";
         if(areStringsame2(s1, s2)){
             System.out.println("Yes");
         }else{
@@ -21,6 +21,15 @@ public class Basic {
         removeCharacter2(sh, 'k');
         String h = s.substring(0, 4);
         System.out.println("Substring of:->:" +h);
+        ///  CharAt(i)--
+        System.out.println("Print char at i: "+ s1.charAt(3));
+        System.out.println("Sbubstring for s1 string: " + s1.substring(1,3));
+        System.out.println("Compare s1 to s2: " +  s1.equals(s ));
+        System.out.println("Equal and ignore letter case: " + s1.equalsIgnoreCase(s2));
+        System.out.println("Compare to: " + s1.compareTo(s2));
+        System.out.println("Check substring: " +  s1.contains(s2));
+
+
 
 
     }
@@ -95,5 +104,6 @@ public class Basic {
 
 
     }
+
 
 }
