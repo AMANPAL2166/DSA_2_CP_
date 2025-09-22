@@ -1,0 +1,16 @@
+GCD and HCF (Euclidean Algorithm)
+Divisors of a number
+Prime numbers using Sieve of Eratosthenes
+Square root
+Modular Arithmetic
+Fast Power-Exponentiation by Squaring
+Factorial of a number
+Fibonacci Number
+Catalan Numbers
+Euler Totient Function
+Prime numbers & Primality Tests
+Prime Factorization & Divisors
+Chinese Remainder Theorem
+Practice Problems based on Maths for DSA
+Most Frequently Asked Questions (FAQs)
+ URL --👉🏻 https://www.geeksforgeeks.org/dsa/maths-for-data-structure-and-algorithms-dsa-a-complete-guide/

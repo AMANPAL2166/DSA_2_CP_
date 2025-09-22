@@ -1,0 +1,71 @@
+ 📘 Sorting Algorithms – Quick Revision Notes
+ 1.Buble Sort
+ Idea: Reapeatedly swap adjacent elements if they are in the wrong order.
+ Time complexity:
+                 : Best : O(n) (when already sorted)
+                 : Average/worst: o(n**2)
+     Space: O(1)
+     Stable: Yes
+     Use case: Simple & good for teaching not used in practise.
+
+ 2. Selection Sort
+   Idea: Repeatedly swap adjacent elements if they are in the wrong order.
+   Time complexity: O(n**2) in all cases
+   Space: O(1)
+   Stable: No
+   Use case: Easy to implement, but inefficient.
+
+ 3.Insertion sort:
+ Idea: Insert element into their correct position like cards in hand.
+ Time Complexity:
+                 : Best - O(n) (already sorted)
+                 : Average/Worst: O(n**2)
+  Space: o(1)
+  Stable: Yes
+  Use case: Efficient for small or nearly sorted arrays.
+
+ 4.  Cyclic Sort
+   (Used only when elements are in the range 1 to  N or 0to N)
+   Idea; Place each element at its correct index (value = index)
+   Time Complexity: o(n)
+   Space: o(1)
+   Stable: No
+   use case: Solving missing number, dublicates number , etc.
+ 5. Merge Sort
+   Idea; Divide array into halves sort them , then merge
+   Time Complexity: O(n logn)
+   Space: O(n)
+   Stable: yes
+   Use Case: Large data, external sorting, linked lists.
+6. Quick Sort
+  Idea: Pick a pivot, partition array, and recursively sort parts.
+  Time Complexity:
+   Best/Average: O(n log n)
+   Worst: O(n²) (rare, bad pivot)
+   Space: O(log n) (recursive stack)
+   Stable: ❌ No
+   Use case: Fastest in practice for in-memory arrays.
+ 7. Counting Sort
+    Idea: Count occurrences and reconstruct the sorted array.
+    Time Complexity: O(n + k)
+    Space: O(k)
+    Stable: ✅ Yes
+   Use case: When input range (k) is small and positive integers.
+ 8. Radix Sort
+    Idea: Sort by each digit (from least to most significant).
+    Time Complexity: O(n × k)
+    Space: O(n + k)
+    Stable: ✅ Yes
+    Use case: Sorting numbers with multiple digits.
+
+IN SORT Summary::::______
+| Algorithm      | Time (Avg) | Space    | Stable | Best Case  |
+| -------------- | ---------- | -------- | ------ | ---------- |
+| Bubble Sort    | O(n²)      | O(1)     | ✅      | O(n)       |
+| Selection Sort | O(n²)      | O(1)     | ❌      | O(n²)      |
+| Insertion Sort | O(n²)      | O(1)     | ✅      | O(n)       |
+| Cyclic Sort    | O(n)       | O(1)     | ❌      | O(n)       |
+| Merge Sort     | O(n log n) | O(n)     | ✅      | O(n log n) |
+| Quick Sort     | O(n log n) | O(log n) | ❌      | O(n log n) |
+| Counting Sort  | O(n + k)   | O(k)     | ✅      | O(n + k)   |
+| Radix Sort     | O(n × k)   | O(n + k) | ✅      | O(n × k)   |

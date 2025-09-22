@@ -1,0 +1,55 @@
+# 📌 Recursion Revision Notes - GitHub Log
+
+## ✅ Topics Covered
+
+1. **Basic Recursion**
+   - Print numbers from N to 1 and 1 to N
+   - Sum of first N numbers
+   - Factorial of N
+   - Power of a number
+
+2. **Array-Based Recursion**
+   - Check if array is sorted
+   - Linear Search using recursion
+   - Reverse array using recursion
+
+3. **String-Based Recursion**
+   - Reverse a string
+   - Check for palindrome
+   - Remove all occurrences of a character
+
+4. **Important Patterns**
+   - Subset/Subsequence generation
+   - Permutations of a string
+   - Generate all balanced parentheses
+
+5. **Backtracking**
+   - N-Queens Problem
+   - Rat in a Maze
+   - Sudoku Solver
+   - Word Search
+
+6. **Recursion Tree & Complexity**
+   - Understanding call stack
+   - Time and space complexity analysis
+
+---
+
+## 📅 Revision Plan
+
+- [ ]   1: Basic recursion & array problems
+- [ ]   2: String problems
+- [ ]   3: Subset & permutations
+- [ ]   4: Backtracking basics
+- [ ]   5: N-Queens & Maze problems
+- [ ]   6: Sudoku + Word search
+- [ ]   7: Recap and mock problems
+
+---
+
+## 🔁 GitHub Push Instructions
+
+```bash
+git add recursion_revision_github.txt
+git commit -m "Added recursion revision plan and notes"
+git push origin main
