@@ -2,8 +2,9 @@ package Recurssion;
 
 public class isPoweroftwo {
     public static void main(String[] args) {
-        int n = 3;
-        System.out.println(isPowerOfTwo_(n));
+        int n = 30;
+//        System.out.println(isPowerOfTwo_(n));
+        System.out.println(isPowerOfThree(n));
 
     }
     public  static boolean isPowerOfTwo_(int n) {
@@ -16,5 +17,14 @@ public class isPoweroftwo {
         }
         return isPowerOfTwo_(n/2);
 
+    }
+    public static boolean isPowerOfThree(int n ){
+        //base case
+        if(n==1){
+            return true;
+        }else if(n<1 || n%3 !=0){
+            return false;
+        }
+        return  isPowerOfThree(n/3);
     }
 }
