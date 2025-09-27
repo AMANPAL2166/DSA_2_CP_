@@ -2,7 +2,7 @@ package Recurssion;
 
 public class Multi_recursion {
     public static void main(String[] args) {
-        int n = 3;
+        int n = 2;
         zigzag(n);
 
     }
