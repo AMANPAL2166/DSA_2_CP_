@@ -4,7 +4,8 @@ public class Display_array {
     public static void main(String[] args) {
         int[] arr = {10,20,30, 40};
         int idx = 2;
-        displayreverse(arr, idx);
+        max(arr, idx);
+        System.out.println(max(arr,idx));
 
     }
 
@@ -27,6 +28,20 @@ public class Display_array {
 
         displayreverse(arr, idx+1);
         System.out.println(arr[idx]);
+
+    }
+
+    public static int max(int[] arr, int idx) {
+        if(idx == arr.length-1){
+            return arr[idx];
+        }
+        int misa = max(arr, idx+1);
+        if(misa > arr[idx]){
+            return misa;
+
+        }else{
+            return arr[idx];
+        }
 
     }
 }
