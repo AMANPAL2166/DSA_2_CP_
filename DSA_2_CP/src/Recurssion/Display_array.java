@@ -3,9 +3,11 @@ package Recurssion;
 public class Display_array {
     public static void main(String[] args) {
         int[] arr = {10,20,30, 40};
-        int idx = 2;
+        int idx = 3;
         max(arr, idx);
-        System.out.println(max(arr,idx));
+        int x = 30;
+        System.out.println(firstIndex(arr,idx, x));
+
 
     }
 
@@ -44,4 +46,18 @@ public class Display_array {
         }
 
     }
+
+    public static int firstIndex(int[] arr, int idx, int x) {
+        if(idx == arr.length-1){
+            return -1;
+        }
+        int fiisa = firstIndex(arr, idx+1, x);
+        if(arr[idx]==x){
+            return idx;
+        }else{
+            return fiisa;
+        }
+    }
+
 }
+
