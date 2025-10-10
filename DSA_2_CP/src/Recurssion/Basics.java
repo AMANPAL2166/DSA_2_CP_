@@ -11,6 +11,7 @@ public class Basics {
         System.out.println("Both increasing and decreasing: ");
         Both_inc_dec(s);
 
+
     }
     public static void sequal_d(int s , int d){
         //Base case
@@ -50,4 +51,21 @@ public class Basics {
         System.out.println(n);
 
     }
+
+    public static void ifelse(String[] args) {
+        int n1 = 10;
+        int n2 = 30;
+        if(n1 == n2){
+            System.out.println(n1+"is equal to "+n2);
+        }
+        else{
+            if(n1>n2){
+                System.out.println(n1+"is greater than "+n2);
+            }else{
+                System.out.println(n1+"is greater than "+n2);
+            }
+        }
+    }
+
+
 }
