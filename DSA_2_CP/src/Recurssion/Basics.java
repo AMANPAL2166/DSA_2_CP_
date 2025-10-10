@@ -10,6 +10,7 @@ public class Basics {
         increasing(22);
         System.out.println("Both increasing and decreasing: ");
         Both_inc_dec(s);
+        marks(d);
 
 
     }
@@ -64,6 +65,22 @@ public class Basics {
             }else{
                 System.out.println(n1+"is greater than "+n2);
             }
+        }
+    }
+
+    public static void marks(int n) {
+        
+        if(n>90){
+            System.out.println("Excellent");
+        } else if (n>80) {
+            System.out.println("Good");
+            
+        } else if (n>70) {
+            System.out.println("Fair");
+        } else if (n>60) {
+            System.out.println("meet expectation");
+        }else{
+            System.out.println("Below far");
         }
     }
 
