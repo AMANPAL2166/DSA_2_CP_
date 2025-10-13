@@ -30,7 +30,7 @@ public class count_digit {
             nod++;
         }
         int div = (int)Math.pow(10, nod-1);
-        while(n!=0){
+        while(div!=0){
             int q = n/div;
             System.out.println(q);
             n= n%div;
