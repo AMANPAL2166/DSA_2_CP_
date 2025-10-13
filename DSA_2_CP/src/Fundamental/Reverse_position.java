@@ -3,17 +3,17 @@ package Fundamental;
 public class Reverse_position {
     public static void main(String[] args) {
         int n = 23415;
-        int inv = 0, op =1;
+        int inverse = 0, original_posi =1;
         while(n!=0){
-            int od = n%10;
-            int id  = op;
-            int ip = od;
+            int original_digit = n%10;
+            int inverted_digit  = original_posi;
+            int inverted_place = original_digit;
             //make changes using id and od
-            inv = inv+id*(int)Math.pow(10, ip-1);
+            inverse = inverse+inverted_digit*(int)Math.pow(10, inverted_place-1);
             n = n/10;
-            op++;
+            original_posi++;
 
         }
-        System.out.println(inv);
+        System.out.println(inverse);
     }
 }
