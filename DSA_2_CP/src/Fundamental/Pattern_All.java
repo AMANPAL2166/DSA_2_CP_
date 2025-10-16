@@ -9,7 +9,8 @@ public class Pattern_All {
 //        first(n);
 //        second(n);
 //        third(n);
-        fourth(n);
+//        fourth(n);
+        fifth(n);
 
 
     }
@@ -61,5 +62,27 @@ public class Pattern_All {
             st--;
             System.out.println();
         }
+    }
+
+    public static void fifth(int n) {//In this pattern there are some condition-- You should always give odd number.
+         int sp = n/2;
+         int st = 1 ;
+         for(int i = 1; i<=n; i++){
+             for(int j=1; j<=sp;j++){
+                 System.out.print ("\t");
+
+             }
+             for (int j = 1; j<=st; j++){
+                 System.out.print ("*\t");
+             }
+             if(i<=n/2){
+                 sp--;
+                 st+=2;
+             }else{
+                 sp++;
+                 st -=2;
+             }
+             System.out.println(" ");
+         }
     }
 }
