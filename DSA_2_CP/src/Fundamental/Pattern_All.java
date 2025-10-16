@@ -11,7 +11,8 @@ public class Pattern_All {
 //        third(n);
 //        fourth(n);
 //        fifth(n);
-        sixth(n);
+//        sixth(n);
+        seventh(n);
 
 
     }
@@ -111,5 +112,20 @@ public class Pattern_All {
             }
             System.out.println(" ");
         }
+    }
+
+    public static void seventh(int n) {
+
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=i; j++){
+                if(i==j){
+                    System.out.print ("*\t");
+                }else{
+                    System.out.print ("\t");
+                }
+            }
+            System.out.println(" ");
+        }
+
     }
 }
