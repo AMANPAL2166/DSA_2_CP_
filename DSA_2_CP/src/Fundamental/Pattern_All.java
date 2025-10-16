@@ -14,7 +14,8 @@ public class Pattern_All {
 //        sixth(n);
 //        seventh(n);
 //        eighth(n);
-        eight_2(n);
+//        eight_2(n);
+        nineth(n);
 
 
 
@@ -156,6 +157,24 @@ public class Pattern_All {
                 }
             }
             System.out.println(" ");
+        }
+
+    }
+    public static void nineth(int n) {
+
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=n; j++){
+                if(i==j || i+j == n+1){
+                    System.out.print ("*\t");
+                }else{
+                    System.out.print ("\t");
+
+                }
+
+            }
+            System.out.println(" ");
+
+
         }
 
     }
