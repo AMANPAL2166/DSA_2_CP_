@@ -13,7 +13,9 @@ public class Pattern_All {
 //        fifth(n);
 //        sixth(n);
 //        seventh(n);
-        eighth(n);
+//        eighth(n);
+        eight_2(n);
+
 
 
     }
@@ -134,6 +136,20 @@ public class Pattern_All {
         for(int i = 1;i<=n;i++){
             for(int j = n; j>=i; j--){
                 if(i==j){
+                    System.out.print ("*\t");
+                }else{
+                    System.out.print ("\t");
+                }
+            }
+            System.out.println(" ");
+        }
+
+    }
+    public static void eight_2(int n) {
+
+        for(int i = 1;i<=n;i++){
+            for(int j = 1; j<=n; j++){
+                if(i+j == n+1){
                     System.out.print ("*\t");
                 }else{
                     System.out.print ("\t");
