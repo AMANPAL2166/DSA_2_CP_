@@ -16,7 +16,8 @@ public class Pattern_All {
 //        eighth(n);
 //        eight_2(n);
 //        nineth(n);
-        tenth(n);
+//        tenth(n);
+        eleventh(n);
 
 
 
@@ -202,5 +203,17 @@ public class Pattern_All {
             }
             System.out.println(" ");
         }
+    }
+
+    public static void eleventh(int n) {
+        int count = 1;
+        for(int i = 1; i<=n; i++){
+            for(int j = 1; j<=i;j++){
+                System.out.print (count+" ");
+                count++;
+            }
+            System.out.println(" ");
+        }
+
     }
 }
