@@ -19,7 +19,8 @@ public class Pattern_All {
 //        tenth(n);
 //        eleventh(n);
 //        twelveth(n);
-        thirteenth(n);
+//        thirteenth(n);
+        fourteenth(n);
 
 
 
@@ -246,5 +247,13 @@ public class Pattern_All {
             System.out.println(" ");
 
         }
+    }
+
+    public static void fourteenth(int n) {
+        for(int i = 1; i<=10; i++){
+            System.out.println (n +"X" + i +"=" + (n*i) );
+        }
+        System.out.println(" ");
+
     }
 }
