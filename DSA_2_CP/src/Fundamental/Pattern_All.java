@@ -20,7 +20,8 @@ public class Pattern_All {
 //        eleventh(n);
 //        twelveth(n);
 //        thirteenth(n);
-        fourteenth(n);
+//        fourteenth(n);
+        fitheenth(n);
 
 
 
@@ -254,6 +255,42 @@ public class Pattern_All {
             System.out.println (n +"X" + i +"=" + (n*i) );
         }
         System.out.println(" ");
+
+    }
+
+    public static void fitheenth(int n) {
+        int sp = n/2;
+        int st = 1;
+        int count = 1;
+        for(int i = 1; i<=n; i++){
+            for(int j = 0; j<=sp; j++){
+                System.out.print ("\t");
+                }
+            int countin = count;
+            for(int k = 1; k<=st; k++){
+                System.out.print (countin+"\t" );
+                if(k<=st/2){
+                    countin++;
+                }else {
+                    countin--;
+                }
+
+
+            }
+            if(i<=n/2){
+                sp--;
+                st+=2;
+                count++;
+            }else{
+                sp++;
+                st -=2;
+                count--;
+            }
+
+            System.out.println(" ");
+
+
+        }
 
     }
 }
