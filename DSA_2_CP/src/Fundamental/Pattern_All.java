@@ -23,7 +23,7 @@ public class Pattern_All {
 //        fourteenth(n);
 //        fitheenth(n);
 //        sixteenth(n);
-        eighteenth(n);
+        seventeenth(n);
 
 
 
@@ -322,7 +322,7 @@ public class Pattern_All {
 
     }
 
-    public static void eighteenth(int n) {
+    public static void seventeenth(int n) {
         int sp = n/2;
         int st = 1;
         for(int i = 1;i<=n; i++ ){
