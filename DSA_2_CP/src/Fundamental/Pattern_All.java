@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Pattern_All {
     public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in) ;
-        int n  = 5;
+        int n  = 7;
 //        first(n);
 //        second(n);
 //        third(n);
@@ -22,7 +22,8 @@ public class Pattern_All {
 //        thirteenth(n);
 //        fourteenth(n);
 //        fitheenth(n);
-        sixteenth(n);
+//        sixteenth(n);
+        eighteenth(n);
 
 
 
@@ -317,6 +318,31 @@ public class Pattern_All {
             st++;
             sp -=2;
             System.out.println ();
+        }
+
+    }
+
+    public static void eighteenth(int n) {
+        int sp = n/2;
+        int st = 1;
+        for(int i = 1;i<=n; i++ ){
+            for(int j = 1; j<=sp;j++ ){
+                if(i==n/2+1){
+                    System.out.print ("*\t");
+                }else{
+                    System.out.print ("\t");
+                }
+            }
+            for(int j = 1; j<=st; j++){
+                System.out.print ("*\t");
+
+            }
+            if(i<=n/2){
+                st++;
+            }else{
+                st--;
+            }
+            System.out.println();
         }
 
     }
