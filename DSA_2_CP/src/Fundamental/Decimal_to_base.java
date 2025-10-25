@@ -2,8 +2,12 @@ package Fundamental;
 
 public class Decimal_to_base {
     public static void main(String[] args) {
-        int n = 683;
+        int n = 634;
         int b = 8;
+        decimal_base(n,b);
+    }
+
+    public static void decimal_base(int n, int b) {
         int rv = 0;
         int p = 1;
         while(n>0){
@@ -13,5 +17,6 @@ public class Decimal_to_base {
             p = p*10;
         }
         System.out.println(rv);
+
     }
 }
