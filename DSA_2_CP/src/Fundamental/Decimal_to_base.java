@@ -2,13 +2,15 @@ package Fundamental;
 
 public class Decimal_to_base {
     public static void main(String[] args) {
-        int n = 1172;
+        int n = 172;
         int b = 8;
+        int c = 2;
 //        decimal_base(n,b);
-        base_decimal(n,b);
+//        base_decimal(n,b);
+        System.out.println(getValue(n, b, c));
     }
 
-    public static void decimal_base(int n, int b) {
+    public static  int decimal_base(int n, int b) {
         int rv = 0;
         int p = 1;
         while(n>0){
@@ -17,11 +19,11 @@ public class Decimal_to_base {
             rv += dig*p;
             p = p*10;
         }
-        System.out.println(rv);
+        return rv;
 
     }
 
-    public static void base_decimal(int n, int m) {
+    public static int base_decimal(int n, int m) {
         int rv = 0;
         int p = 1;
         while(n>0){
@@ -31,6 +33,12 @@ public class Decimal_to_base {
             p = p*m;
 
         }
-        System.out.println(rv);
+        return rv;
+    }
+
+    public static int getValue(int n, int b1, int b2) {
+        int dec = decimal_base(n,b1);
+        int dn = base_decimal(dec, b2);
+        return dn;
     }
 }
