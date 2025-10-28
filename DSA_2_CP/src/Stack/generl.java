@@ -5,5 +5,6 @@ public class generl {
         System.out.println(
                 "I'm glad to inform u..!!"
         );
+        System.out.println(" ");
     }
 }
