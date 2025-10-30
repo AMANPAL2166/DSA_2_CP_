@@ -18,7 +18,7 @@ public class Basic_Concept {
         System.out.println(list);//Now check
 //        list.add(3,33);//Add element by index
         System.out.println(list);//check
-        //Note::-Here we can't add 33 on there because linkedlist size is 2. Soo can only add from 1-2
+        //Note::-Here we can't add 33 on it because linkedlist size is 2. Soo we can only add from 1-2
         list.add(1, 44);
         System.out.println(list);
         list.add(2, 1999);
