@@ -69,6 +69,5 @@ public class Majority_element {
 
 
      }
-     //..... Updated on 1Sep
-
+     
 }
