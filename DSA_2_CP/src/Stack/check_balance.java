@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class check_balance {
     public static void main(String[] args) {
-        String str = "(a+b)";
+        String str = "(a+b)+(a+b)]";
         Stack<Character> st = new Stack<>();
         for(int i = 0; i<str.length(); i++) {
             char ch = str.charAt(i);
