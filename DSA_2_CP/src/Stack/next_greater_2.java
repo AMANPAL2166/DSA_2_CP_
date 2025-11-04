@@ -41,8 +41,5 @@ public class next_greater_2 {
             st.pop();
         }
         return nget;
-
-
-
     }
 }
