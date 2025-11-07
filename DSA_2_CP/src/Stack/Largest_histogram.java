@@ -20,6 +20,7 @@ public class Largest_histogram {
             }
             st.push(i);
         }
+        System.out.println("Stack overview: "+ st);
 
         int[] lb = new int[arr.length];
         st = new Stack<>();
@@ -36,6 +37,7 @@ public class Largest_histogram {
             }
             st.push(i);
         }
+        System.out.println("Stack overview: "+ st);
         //Area
         int maxArea = 0;
         for(int i = 0; i<arr.length; i++){
