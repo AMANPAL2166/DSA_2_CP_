@@ -6,10 +6,10 @@ import java.util.Stack;
 
 public class next_greater_n2 {
     public static void main(String[] args) {
-        int[] arr = {3,4,2,6,7,3,7,3,8};
+         int[] arr = {3,4,2,6,7,3,7,3,8};
         System.out.println(solve_n2_Arraylist(arr));//This method used O(n^2)
         System.out.println(Arrays.toString(solve(arr)));//This method used  same O(n^2)
-        System.out.println(Arrays.toString(using_n(arr)));//This method is optimized method using stack O(n)
+         System.out.println(Arrays.toString(using_n(arr)));//This method is optimized method using stack O(n)
 
     }
 
@@ -49,7 +49,7 @@ public class next_greater_n2 {
         next_greater[arr.length-1] = -1;
         st.push(arr[arr.length-1]);
         for(int i = arr.length-2; i>=0; i--){
-            //first pop then answer then push
+            //first pop, answer then push
             // -a+
             while(st.size()>0 && arr[i]>st.peek()){
                 st.pop();
