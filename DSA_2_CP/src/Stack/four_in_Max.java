@@ -20,7 +20,7 @@ public class four_in_Max {
 
              }
              st.add(max);
-             i+=2;
+//             i+=2;
          }
         System.out.println(st);
          n(arr);
@@ -44,6 +44,7 @@ public class four_in_Max {
                 next_greater_element[ i] = st.peek();
             }
             st.push(i);
+            System.out.println("Next greater element " + Arrays.toString(next_greater_element));
         }
         int j = 0;
         for(int i =0; i<=arr.length-k;i++ ){
