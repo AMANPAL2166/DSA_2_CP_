@@ -3,8 +3,28 @@ package Stack;
 public class Build_Normal_stack {
     public static void main(String[] args) {
 
-        myStack m = new myStack(9);
-        System.out.println(m.isEmpty());
+        myStack stack = new myStack(5); // Create stack of size 5
+
+        System.out.println("Is stack empty? " + stack.isEmpty());
+
+        System.out.println("Pushing elements: 10, 20, 30");
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.peek();
+
+        System.out.println("Is stack full? " + stack.isFull());
+        System.out.println("Top element (peek): " + stack.peek());
+
+        System.out.println("Popping elements:");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+
+        System.out.println("Is stack empty now? " + stack.isEmpty());
+
+        System.out.println("Trying to pop from empty stack:");
+        stack.pop(); // Should show underflow message
 
     }
      static class myStack {
@@ -34,7 +54,7 @@ public class Build_Normal_stack {
              data[toss] = x;
          }
 
-         public  int peek(int x) {
+         public  int peek( ) {
              if(isEmpty()){
                  System.out.println("Stack is underflow!! ");
                  return -1;
@@ -42,7 +62,7 @@ public class Build_Normal_stack {
              return data[toss];
          }
 
-         public  int pop(int n) {
+         public  int pop( ) {
              if(isEmpty()){
                  System.out.println("Stack underflow no element to pop.");
                  return -1;
