@@ -10,7 +10,7 @@ public class celebrity_Problem {
                 {0, 0, 0, 0},
                 {0, 1, 1, 0}
         };
-        int celeb = findcelebrity(n);
+        int celeb = findcelebrity_1(n);
         if(celeb == -1){
             System.out.println("No celebrity found");
         }else {
@@ -36,5 +36,28 @@ public class celebrity_Problem {
         return -1;
 
 
+    }
+
+    public static int findcelebrity_1(int n) {
+        //find the candidate
+        int candidate = 0;
+        for (int i = 1; i < n; i++) {
+            if (knowmatrix[candidate][i] == 1) {
+                // candidate knows i, so candidate can't be celebrity
+                candidate = i;
+            }
+            // else candidate does not know i; keep candidate as it is
+        }
+
+        // Step 2: Verify the candidate
+        for (int i = 0; i < n; i++) {
+            if (i != candidate) {
+                // if candidate knows i OR i doesn't know candidate
+                if (knowmatrix[candidate][i] == 1 || knowmatrix[i][candidate] == 0) {
+                    return -1; // Not a celebrity
+                }
+            }
+        }
+        return candidate; // Candidate is celebrity
     }
 }
