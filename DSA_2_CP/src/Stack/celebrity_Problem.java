@@ -1,5 +1,7 @@
 package Stack;
 
+import java.util.Stack;
+
 public class celebrity_Problem {
     static int[][] knowmatrix;
     public static void main(String[] args) {
@@ -10,12 +12,14 @@ public class celebrity_Problem {
                 {0, 0, 0, 0},
                 {0, 1, 1, 0}
         };
-        int celeb = findcelebrity_1(n);
-        if(celeb == -1){
-            System.out.println("No celebrity found");
-        }else {
-            System.out.println("Celebrity is person " + celeb);
-        }
+//        int celeb = findcelebrity_2(knowmatrix);
+        findcelebrity_2(knowmatrix);
+
+//        if(celeb == -1){
+//            System.out.println("No celebrity found");
+//        }else {
+//            System.out.println("Celebrity is person " + celeb);
+//        }
 
     }
 //This is a bruteforce method
@@ -59,5 +63,34 @@ public class celebrity_Problem {
             }
         }
         return candidate; // Candidate is celebrity
+    }
+
+    public static void findcelebrity_2(int[][] arr) {
+        Stack<Integer> st = new Stack<>();
+        for(int i = 0; i<arr.length; i++){
+            st.push(i);
+        }
+        while(st.size()>2){
+            int i = st.pop();
+            int j = st.pop();
+            if(arr[i][j] ==1){
+                /// if i knows ->j : then i is not a celebrity
+                st.push(j);
+            }else {
+                /// if  j knows -> i : then j is not a celebrity;
+              st.push(i);
+            }
+        }
+        int pot = st.pop();
+        for(int i = 0; i<arr.length; i++){
+            if(i != pot){
+                if(arr[i][pot] == 0 || arr[pot][i] == 1){
+                    System.out.println("None");
+                    return;
+                }
+            }
+        }
+        System.out.println(pot);
+
     }
 }
