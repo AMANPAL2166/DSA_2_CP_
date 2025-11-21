@@ -63,7 +63,4 @@ public class infinix_conversion {
         else if (optor == '*' || optor == '/') return 2;
         else return 0;
     }
-
-
-
 }
