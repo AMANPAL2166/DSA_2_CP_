@@ -7,7 +7,7 @@ public class MinStack {
         Stack<Integer> allData;
         Stack<Integer> minData;
 
-        public void minstack(){
+        public Minstack(){
             allData = new Stack<>();
             minData = new Stack<>();
 
@@ -17,7 +17,7 @@ public class MinStack {
         }
         void push(int val){
             allData.push(val);
-            if(minData.size() == 0 || val < minData.peek()){
+            if(minData.size() == 0 || val <= minData.peek()){
                 minData.push(val);
             }
 
@@ -80,7 +80,9 @@ public class MinStack {
 //        System.out.println("Is stack empty now? " + stack.isEmpty());
 
         System.out.println("Trying to pop from empty stack:");
-        stack.pop(); // Should show underflow message
+        stack.pop();
+        System.out.println("Now peak of the element " + stack.min());
+        System.out.println("Length of stack " + stack.size());
 
     }
 }
