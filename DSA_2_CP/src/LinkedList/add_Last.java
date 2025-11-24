@@ -7,6 +7,7 @@ public class add_Last {
     static class Node {
         int data;
         Node next;
+        int size;
 
         Node(int d) {
             data = d;
@@ -15,7 +16,8 @@ public class add_Last {
     }
 
     Node head; // head of list
-    Node tail; // tail of list to optimize addLast to O(1)
+    Node tail;
+    int size;// tail of list to optimize addLast to O(1)
 
     // Constructor
     public add_Last() {
@@ -33,6 +35,11 @@ public class add_Last {
             tail.next = newNode;
             tail = newNode;
         }
+    }
+
+    public int size( ) {
+        return size;
+
     }
 
     // Print elements of the list
@@ -56,5 +63,7 @@ public class add_Last {
         System.out.print("Linked list elements: ");
         list.display();
         // Expected output: 10 20 30
+        System.out.println("Size of a Linkedlist"  +list.size);
+
     }
 }
