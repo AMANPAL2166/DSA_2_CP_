@@ -19,8 +19,8 @@ public class Basics {
 //        int speed;
 //        String brand ;
 //    }
-    //Now we have a question. Can we make class in the main function;
-   // -------Let's ' check-----
+////    Now we have a question. Can we make class in the main function;
+//    -------Let's ' check-----
 //public static void main(String[] args) {
 //     class Car{
 //        String name;
@@ -36,8 +36,8 @@ public class Basics {
 //    System.out.println(x.speed);
 //
 //}
-
+//
 // Soo the answer is, yes we can but here is the catch point -- we can't use this class outside of the main function this is the main drawback;;;;;
-
+//
 
 }
