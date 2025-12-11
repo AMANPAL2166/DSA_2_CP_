@@ -6,7 +6,7 @@ public class anagram {
     public static void main(String[] args) {
         String s = "anagram";
         String t =  "nagaram";
-        System.out.println(checkanagram1(s,t));
+        System.out.println(checkanagram_2(s,t));
 
     }
     public static boolean checkanagram(String s, String t ){//this method approach is totally wrong--
@@ -32,6 +32,23 @@ public class anagram {
         Arrays.sort(s1);
         Arrays.sort(s2);
         return Arrays.equals(s1, s2);
+
+    }
+    public static boolean checkanagram_2(String s, String t){
+         //checking case
+        if (s.length() != t.length()) return false;
+
+        int[] freq = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
+            freq[t.charAt(i) - 'a']--;
+        }
+
+        for (int f : freq) {
+            if (f != 0) return false;
+        }
+        return true;
 
     }
 }
