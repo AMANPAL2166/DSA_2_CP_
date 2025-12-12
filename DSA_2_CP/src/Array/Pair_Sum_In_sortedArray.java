@@ -5,9 +5,9 @@ import java.util.HashSet;
 
 public class Pair_Sum_In_sortedArray {
     public static void main(String[] args) {
-        int[] arr = {3,1,3,7,8,0};
-        int target = 2;
-        System.out.println(pairInSortedRotated_1(arr, target));
+        int[] arr = {11, 15, 6, 8, 9, 10};
+        int target = 16;
+        System.out.println(pairInSortedRotated_2(arr, target));
 
     }
 
@@ -50,5 +50,36 @@ public class Pair_Sum_In_sortedArray {
             set.add(arr[i]);
         }
         return false;
+    }
+    /// / Optimized method
+    public static boolean pairInSortedRotated_2(int[] arr, int target) {
+        int n = arr.length;
+        //find the pivot element
+        int i;
+        for(i = 0 ;i<arr.length; i++){
+            if(arr[i] > arr[i+1]);
+            break;
+        }
+        //l is now index of smallest element
+        int l = (i+1) %n;
+        // r is now index of largest element
+        int r = i;
+        //keep moving either l or r till they meet
+        while(l != r){
+            // If we find  a pair with sum target, return here
+            if(arr[l] + arr[r] == target){
+                return true;
+            }
+            //If current pair sum is less, move to higher sum
+            if(arr[l] +arr[r] < target){
+                l = (l+1)%n;
+            }
+            //move to lower sum side
+            else {
+                r = (r -1+n)%n;
+            }
+
+        }return false;
+
     }
 }
