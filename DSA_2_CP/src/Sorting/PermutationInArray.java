@@ -9,8 +9,8 @@ public class PermutationInArray {
     public static void main(String[] args) {
         int[] arr1  = {1, 2, 2, 1};
         int[] arr2 = {3, 3, 3, 4};
-        int targe  = 5;
-        System.out.println(isPossible(targe, arr1, arr2));
+        int target  = 5;
+        System.out.println(isPossible(target, arr1, arr2));
 
 
     }
