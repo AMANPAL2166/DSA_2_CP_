@@ -35,5 +35,7 @@ public class Linkedlist {
         li.insertHead(33);
 //        System.out.println(li.data);
 
+
+
     }
 }
