@@ -18,9 +18,22 @@ public class Linkedlist {
         head  = null;//Empty chain
     }
 
+    public static void insertHead(int data){
+        //Step 1: create new node
+        Node newNode = new Node(data);//[data|null]
+        //Step 2: Make newNode print to current head
+        newNode.next = head; //[data-->old_data]
+        //Step 3: Move head to new node
+        head = newNode; //Head--->newNode
+    }
+
     public static void main(String[] args) {
         Node list = new Node(10);
         System.out.println(list.data);
+        Linkedlist li = new Linkedlist();
+        li.insertHead(39);
+        li.insertHead(33);
+//        System.out.println(li.data);
 
     }
 }
