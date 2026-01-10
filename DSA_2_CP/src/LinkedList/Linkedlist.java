@@ -19,12 +19,12 @@ public class Linkedlist {
     }
 
     public static void insertHead(int data){
-        //Step 1: create new node
-        //Node newNode = new Node(data);//[data|null]
-        //Step 2: Make newNode print to current head
-        //newNode.next = head; //[data-->old_data]
-        //Step 3: Move head to new node
-       // head = newNode; //Head--->newNode
+//        Step 1: create new node
+//        Node newNode = new Node(data);//[data|null]
+//        Step 2: Make newNode print to current head
+//        newNode.next = head; //[data-->old_data]
+//        Step 3: Move head to new node
+//        head = newNode; //Head--->newNode
     }
 
     public static void main(String[] args) {
