@@ -23,7 +23,7 @@ public class Doubly_Linkedlist {
         list.next.next = new Node(12);
         list.next.next.prev = list;
 
-        //Traverse the list forword and print the elements
+        //Traverse the list forward and print the elements
         Node temp = list;
         while(temp != null){
             System.out.print (temp.data);
