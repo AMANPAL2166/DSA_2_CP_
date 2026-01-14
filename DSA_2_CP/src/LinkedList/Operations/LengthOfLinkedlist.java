@@ -28,6 +28,14 @@ public class LengthOfLinkedlist {
         return count;
     }
 
+    public static int FindLength2(Node head){
+        //Recursive method
+        //base case
+        if(head == null){
+            return 0;
+        }
+        return 1+ FindLength2(head.next);
+    }
     public static void main(String[] args) {
         Node list = new Node(1);
         list.next   = new Node(2);
@@ -37,7 +45,7 @@ public class LengthOfLinkedlist {
         list.next.next.next.next.next  = new Node(6);
 
         //function call to count the number of nodes
-        System.out.println("count of node is " + FindLength(list));
+        System.out.println("count of node is " + FindLength2(list));
         //print node
         Node temp = list;
         while(temp != null){
