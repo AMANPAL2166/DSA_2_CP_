@@ -1,6 +1,4 @@
-package LinkedList;
-
-import java.util.LinkedList;
+package LinkedList.Basics;
 
 public class Linkedlist {
     //Single most important class - The "box"
@@ -18,7 +16,7 @@ public class Linkedlist {
         head  = null;//Empty chain
     }
 
-    public   void insertHead(int data){
+    public void insertHead(int data){
 //        Step 1: create new node
         Node newNode = new Node(data);//[data|null]
 //        Step 2: Make newNode print to current head
@@ -33,7 +31,7 @@ public class Linkedlist {
         Linkedlist li = new Linkedlist();
         li.insertHead(39);
         li.insertHead(33);
-//        System.out.println(li.data);
+//         System.out.println(li.data);
 
 
 
