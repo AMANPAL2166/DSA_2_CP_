@@ -46,6 +46,11 @@ public class Search {
 
         //Key to search in linkedlist
         int key = 50;
+        if(search(list,key)){
+            System.out.println("true");
+        }else{
+            System.out.println("False");
+        }
         if(search2(list,key)){
             System.out.println("true");
         }else{
