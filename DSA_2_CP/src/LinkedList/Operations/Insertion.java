@@ -71,6 +71,32 @@ public class Insertion {
 
 
     }
+    //Insert a node at a specific position
+    public static Node insetPos(Node head, int pos, int val){
+        if(pos<1){
+            return head;
+        }
+        //head will change if pos=1
+        if(pos == 1){
+            Node newNode = new Node(val);
+            newNode.next = head;
+            return  newNode;
+        }
+        Node curr = head;
+        //Traverse to the node that will be present just before the new node
+        for(int i = 0;i<pos-1&& curr!= null; i++){
+            curr = curr.next;
+        }
+        //If position is greater than the number of nodes
+        if(curr == null){
+            return head;
+        }
+        Node newNode =  new Node(val);
+        //update the next pointer
+        newNode.next = curr.next;
+        curr.next = newNode;
+        return head;
+    }
     //Print function
     public static void PrintLinkedlist(Node head){
         Node curr = head;
@@ -106,7 +132,9 @@ public class Insertion {
         list = insertBeforeKey(list, new_key, New_data);
         System.out.print("New linkedlist:: ");
         PrintLinkedlist(list);
-
-
+        int pos = 3;
+        System.out.println("Insert node at " +pos + " position:");
+        list = insetPos(list, pos, New_data);
+        PrintLinkedlist(list);
     }
 }
