@@ -97,6 +97,26 @@ public class Insertion {
         curr.next = newNode;
         return head;
     }
+    //Insert at end
+    public static Node insertatEnd(Node head, int val){
+        //create a new node
+        Node newNode = new Node(val);
+        //If the linkedlist is empty, make the new node as the head and return
+        if(head == null){
+            return newNode;
+        }
+        //Store the head reference in a temporary variable
+        Node last = head;
+        //Traverse till the last node
+        while(last.next != null){
+            last = last.next;
+        }
+        //Change the next pointer of the last node to point to the new node
+        last.next = newNode;
+        //Return the head of the list
+        return head;
+
+    }
     //Print function
     public static void PrintLinkedlist(Node head){
         Node curr = head;
@@ -135,6 +155,9 @@ public class Insertion {
         int pos = 3;
         System.out.println("Insert node at " +pos + " position:");
         list = insetPos(list, pos, New_data);
+        PrintLinkedlist(list);
+        System.out.print ("Insert at last of the node:" );
+        list = insertatEnd(list, New_data);
         PrintLinkedlist(list);
     }
 }
