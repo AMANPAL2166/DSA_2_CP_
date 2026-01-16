@@ -42,6 +42,35 @@ public class Insertion {
         return head;
 
     }
+    //Function:: Insert a node in Linked List before a given node(Iterative approach)
+    public static Node insertBeforeKey(Node head, int key, int new_data){
+        //Special case: If the key is at head
+        if(head == null){
+            return null;
+        }
+        if(head.data == key){
+            Node newNode = new Node(new_data);
+            newNode.next = head;
+            return newNode;
+        }
+        //Initialize current and previous pointers
+        Node curr = head;
+        Node prev = null;
+        //Traverse the list to find the key
+        while(curr !=null && curr.data != key){
+            prev = curr;
+            curr = curr.next;
+        }
+        //If the key was found
+        if(curr!= null){
+            Node newNode = new Node(new_data);
+            prev.next = newNode;
+            newNode.next = curr;
+        }
+        return head;
+
+
+    }
     //Print function
     public static void PrintLinkedlist(Node head){
         Node curr = head;
@@ -73,6 +102,11 @@ public class Insertion {
         list = insertAfter(list,new_key,New_data );
         System.out.print("Insert at 2 node: " );
         PrintLinkedlist(list);
+        System.out.println("Insertion before the key:");
+        list = insertBeforeKey(list, new_key, New_data);
+        System.out.print("New linkedlist:: ");
+        PrintLinkedlist(list);
+
 
     }
 }
