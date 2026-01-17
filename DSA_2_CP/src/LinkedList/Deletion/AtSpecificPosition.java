@@ -21,18 +21,18 @@ public class AtSpecificPosition {
             curr = curr.next;
         }
     }
-    public static Node DeleteAtSpecific(Node head, int key){
+    public static Node DeleteAtSpecific(Node head, int x){
         //Create a temp variable
         Node temp = head;
-        //Check if key is one then remove head
-        if(key == 1){
+        //Check if x is one then remove head
+        if(x == 1){
             head = temp.next;
             return head;
         }
         //Traverse to the node before the one to be deleted
         //create a prev variable
         Node prev = null;
-        for(int i = 1;i<key; i++){
+        for(int i = 1;i<x; i++){
             prev= temp;
             temp = temp.next;
         }
