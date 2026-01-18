@@ -31,6 +31,19 @@ public class get_nth_node {
         //return -1, if didn't get any index
         return -1;
     }
+    static int getNth(Node head, int index){//Recursive approach
+        //Base case
+        if(head == null){
+            return -1;
+        }
+        //If index equal to 1 return node.data
+        if(index == 1){
+            return head.data;
+        }
+        //recursively decrease n and increase
+        //head to the next pointer;
+        return getNth(head.next, index-1);
+    }
 
     public static void main(String[] args) {
         // Create a hard-coded linked list:
@@ -41,7 +54,7 @@ public class get_nth_node {
         head.next.next.next = new Node(4);
         head.next.next.next.next = new Node(5);
         int index =9;
-        int curent = getdata(head, index);
+        int curent = getNth(head, index);
         if(curent!=-1){
             System.out.println("Element at index  "+index + " is " + curent);
         }else{
