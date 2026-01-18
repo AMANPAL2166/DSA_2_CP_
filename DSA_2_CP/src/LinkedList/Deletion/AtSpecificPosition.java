@@ -48,6 +48,9 @@ public class AtSpecificPosition {
          newlist.next.next.next = new Node(4);
 
          int key  = 4;
+         PrintLinkedlist(newlist);
+        System.out.println();
+        System.out.println("Delete " + key + " of node " );
          newlist = DeleteAtSpecific(newlist, key);
          PrintLinkedlist(newlist);
 
