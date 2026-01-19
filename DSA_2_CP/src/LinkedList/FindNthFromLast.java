@@ -63,6 +63,7 @@ public class FindNthFromLast {
 
         // Function Call to find the 4th node from end
         System.out.println(getNode(head, 2));
+        System.out.println(getNode2(head, 2));
     }
 
 
