@@ -30,6 +30,28 @@ public class FindNthFromLast {
         }
         return temp.data;
     }
+    //Two Pointer
+    static int getNode2(Node head, int key){//
+         //Create two pointer main_ptr and ref_ptr initially point head
+        Node main_ptr = head;
+        Node ref_ptr = head;
+        //Move ref_ptr to the N-th node from from beginnig
+        for(int i = 1; i<key;i++){
+            ref_ptr = ref_ptr.next;
+            //If ref_ptr reached to the null it means key>length of linkedlist
+            if(ref_ptr==null){
+                return -1;
+            }
+        }
+        //Move ref_ptr and main_ptr by one node until
+        //ref_ptr reaches last node of the list
+        while(ref_ptr.next != null){
+            ref_ptr = ref_ptr.next;
+            main_ptr =  main_ptr.next;
+        }
+        return main_ptr.data;
+
+    }
     public static void main(String[] args) {
 
         // Create a hard-coded linked list:
