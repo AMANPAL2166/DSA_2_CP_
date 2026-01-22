@@ -50,13 +50,28 @@ public class reverse {
 
         }
     }
+    //Three pointer iterative approach
+    static Node reverse2(Node head){
+        Node curr = head, prev = null,next  ;
+        //Traverse all the node of linkedlist
+        while(curr != null){
+            //store next
+            next = curr.next;
+            //reverse curr node's next pointer
+            curr.next = prev;
+            //Move pointers one position ahead
+            prev = curr;
+            curr = head;
+        }
+        return prev;
+    }
 
     public static void main(String[] args) {
         Node list = new Node(1);
         list.next  = new Node(2);
         list.next.next = new Node(3);
         list.next.next.next = new Node(4);
-        list = reverselinkedlist(list);
+        list = reverse2(list);
         print(list);
 
     }
