@@ -55,11 +55,11 @@ public class reverse {
         Node curr = head, prev = null,next  ;
         //Traverse all the node of linkedlist
         while(curr != null){
-            //store next
+            ///store next
             next = curr.next;
-            //reverse curr node's next pointer
+           ///reverse curr node's next pointer
             curr.next = prev;
-            //Move pointers one position ahead
+            ///Move pointers one position ahead
             prev = curr;
             curr = head;
         }
