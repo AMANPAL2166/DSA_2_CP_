@@ -1,4 +1,4 @@
-package TwoPointer_and_SlidingWindow;
+package Two_Pointer;
 //Input: arr[] = [3, 2, 2, 3], ele = 3
 //Output: 2
 //Explanation: The answer is 2 because there are 2 elements which are not equal to 3 and arr[] will be modified such that the first 2 elements contain the elements which are not equal to 3 and remaining elements can contain any element. So, modified arr[] = [2, 2, _, _]
