@@ -86,6 +86,15 @@ public class Linked_List {
         }
         System.out.println(i);
     }
+    public void remonvefirst(){
+        if(head == null){
+           return;
+        }
+        Node temp = head ;
+        head = head.next;
+        temp = null;
+
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
@@ -101,7 +110,10 @@ public class Linked_List {
         ll.print();
         ll.size();
         System.out.println(ll.new_size);
-
+//        ll.remonvefirst();
+//        ll.remonvefirst();
+//        ll.size();
+//        ll.print();
     }
 
 }
