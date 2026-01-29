@@ -13,7 +13,7 @@ public class Linked_List {
     public static Node head;
     public static Node tail;
 //------------Print function--------------
-    public void print( ){
+    public void print( ){//O(n)--because, it goes all the element of list.
         Node curr = head;
         while(curr != null){
             System.out.print (curr.data+"->");
@@ -39,8 +39,6 @@ public class Linked_List {
         newlist.next = head;//Linking step
         //Step 3 - newlist = head;
         head = newlist;
-
-
     }
     public void addLast(int data){
         //Step 1 : Create a new Node
@@ -56,6 +54,25 @@ public class Linked_List {
         //Step 3: assign tail = newNode
         tail = newNode;
     }
+    public void add(int idx, int data){
+        //If idx = 0;
+        if(idx == 0){
+            addFirst(data);
+            return;
+        }
+        //Create a new node
+        Node newNode = new Node(data);
+        //create a variable to store temp value
+        Node temp = head;
+        int i = 0;
+        while(i<idx -1){
+            temp = temp.next;
+            i++;
+        }
+        //i = idx-1; temp = temp->prev
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
@@ -66,6 +83,8 @@ public class Linked_List {
         ll.addFirst(1);
         ll.print();
         ll.addLast(4);
+        ll.print();
+        ll.add(2, 30);
         ll.print();
 
     }
