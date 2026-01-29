@@ -13,16 +13,15 @@ public class Linked_List {
     public static Node head;
     public static Node tail;
 //------------Print function--------------
-    public void print(Node head){
+    public void print( ){
         Node curr = head;
         while(curr != null){
-            System.out.print (curr.data);
-            if(curr.next != null){
-                System.out.print ("->");
-            }
+            System.out.print (curr.data+"->");
+
             //update currant
             curr = curr.next;
         }
+        System.out.println();
     }
 //    public static Node head;
 //    public static Node tail;
@@ -33,13 +32,13 @@ public class Linked_List {
         //Base case, if our list is empty
         if(head == null){
             head = tail  = newlist;
+            return;
 
         }
-
         //Step 2 - Assign newlist next = head;
         newlist.next = head;//Linking step
         //Step 3 - newlist = head;
-        newlist = head;
+        head = newlist;
 
 
     }
@@ -53,17 +52,21 @@ public class Linked_List {
             return;
         }
         //Step 2: link newNode.next = tail;
-        newNode.next  =tail;
+        tail.next  =newNode;
         //Step 3: assign tail = newNode
         tail = newNode;
     }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
-        ll.head = new Node(1);
-        head.next = new Node(2);
-        ll.addFirst(0);
+        ll.addFirst(2);
+        ll.print();
+        ll.addLast(3);
         ll.print( );
+        ll.addFirst(1);
+        ll.print();
+        ll.addLast(4);
+        ll.print();
 
     }
 
