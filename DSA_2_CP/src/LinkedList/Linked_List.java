@@ -12,6 +12,8 @@ public class Linked_List {
     }
     public static Node head;
     public static Node tail;
+    //new static size
+    public static int new_size;
 //------------Print function--------------
     public void print( ){//O(n)--because, it goes all the element of list.
         Node curr = head;
@@ -29,6 +31,7 @@ public class Linked_List {
     public void   addFirst(int data ){
         //Step 1st - Create new node
         Node newlist = new Node(data);
+        new_size++;
         //Base case, if our list is empty
         if(head == null){
             head = tail  = newlist;
@@ -43,6 +46,7 @@ public class Linked_List {
     public void addLast(int data){
         //Step 1 : Create a new Node
         Node newNode = new Node(data);
+        new_size++;//update size of linkedlist
         /// Check base cases
 
         if(head == null){
@@ -62,6 +66,7 @@ public class Linked_List {
         }
         //Create a new node
         Node newNode = new Node(data);
+        new_size++;
         //create a variable to store temp value
         Node temp = head;
         int i = 0;
@@ -72,6 +77,14 @@ public class Linked_List {
         //i = idx-1; temp = temp->prev
         newNode.next = temp.next;
         temp.next = newNode;
+    }
+    public void size(){
+        int i = 0;
+        while(head != null){
+            head = head.next;
+            i++;
+        }
+        System.out.println(i);
     }
 
     public static void main(String[] args) {
@@ -86,6 +99,8 @@ public class Linked_List {
         ll.print();
         ll.add(2, 30);
         ll.print();
+        ll.size();
+        System.out.println(ll.new_size);
 
     }
 
