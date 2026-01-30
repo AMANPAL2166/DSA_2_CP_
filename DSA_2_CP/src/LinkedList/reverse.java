@@ -52,16 +52,16 @@ public class reverse {
     }
     //Three pointer iterative approach
     static Node reverse2(Node head){
-        Node curr = head, prev = null,next  ;
+        Node curr = head, prev = null,front  ;
         //Traverse all the node of linkedlist
         while(curr != null){
             ///store next
-            next = curr.next;
+            front = curr.next;
            ///reverse curr node's next pointer
             curr.next = prev;
             ///Move pointers one position ahead
             prev = curr;
-            curr = head;
+            curr = front;
         }
         return prev;
     }
@@ -71,7 +71,9 @@ public class reverse {
         list.next  = new Node(2);
         list.next.next = new Node(3);
         list.next.next.next = new Node(4);
+        print(list);
         list = reverse2(list);
+        System.out.println();
         print(list);
 
     }
