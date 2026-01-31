@@ -106,25 +106,30 @@ public class Linked_List {
 
 
     }
-    public int removelast(){
-        //base case
-        if(new_size == 0){
-            System.out.println("List is empty.");
-            return 0;
-        } else if (new_size ==1) {
+    public int removeLast() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return -1;
+        }
+
+        if (head.next == null) {
             int val = head.data;
             head = tail = null;
-            new_size = 0;
             return val;
         }
+
         Node prev = head;
-        for(int i = 0; i<new_size-2; i++){
+
+        // traverse using links, NOT size
+        while (prev.next != tail) {
             prev = prev.next;
         }
-        int val = tail.data;//tail
+
+        int val = tail.data;
         prev.next = null;
         tail = prev;
-        new_size--;
+
         return val;
     }
 
@@ -141,7 +146,7 @@ public class Linked_List {
         ll.add(2, 30);
         ll.remonvefirst();
         ll.print();
-        ll.removelast();
+        ll.removeLast();
         ll.print();
 
 
