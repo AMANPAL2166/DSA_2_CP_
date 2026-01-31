@@ -1,5 +1,7 @@
 package LinkedList;
 
+//import static jdk.internal.jrtfs.JrtFileAttributeView.AttrID.size;
+
 public class Linked_List {
     public static class Node{
         int data;
@@ -86,14 +88,44 @@ public class Linked_List {
         }
         System.out.println(i);
     }
-    public void remonvefirst(){
-        if(head == null){
-           return;
+    public int remonvefirst(){
+        if(new_size == 0){
+            System.out.println("List is empty.");
+           return Integer.MIN_VALUE;
+        } else if (new_size == 1) {
+            int val = head.data;
+            head = tail = null;
+            new_size=0;
+            return val;
+            
         }
-        Node temp = head ;
+        int val = head.data;
         head = head.next;
-        temp = null;
+        new_size++;
+        return val;
 
+
+    }
+    public int removelast(){
+        //base case
+        if(new_size == 0){
+            System.out.println("List is empty.");
+            return 0;
+        } else if (new_size ==1) {
+            int val = head.data;
+            head = tail = null;
+            new_size = 0;
+            return val;
+        }
+        Node prev = head;
+        for(int i = 0; i<new_size-2; i++){
+            prev = prev.next;
+        }
+        int val = prev.next.data;//tail
+        prev.next = null;
+        tail = prev;
+        new_size--;
+        return val;
     }
 
     public static void main(String[] args) {
@@ -107,13 +139,10 @@ public class Linked_List {
         ll.addLast(4);
         ll.print();
         ll.add(2, 30);
+        ll.remonvefirst();
         ll.print();
-        ll.size();
-        System.out.println(ll.new_size);
-//        ll.remonvefirst();
-//        ll.remonvefirst();
-//        ll.size();
-//        ll.print();
+
+
     }
 
 }
