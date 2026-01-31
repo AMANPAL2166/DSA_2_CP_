@@ -1,4 +1,4 @@
-package Leetcode_Contest.Jan_First;
+package Leetcode_Contest.JAN_CONTEST;
 
 import java.util.ArrayList;
 import java.util.Collections;
