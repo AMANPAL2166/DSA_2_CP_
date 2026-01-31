@@ -121,7 +121,7 @@ public class Linked_List {
         for(int i = 0; i<new_size-2; i++){
             prev = prev.next;
         }
-        int val = prev.next.data;//tail
+        int val = tail.data;//tail
         prev.next = null;
         tail = prev;
         new_size--;
@@ -140,6 +140,8 @@ public class Linked_List {
         ll.print();
         ll.add(2, 30);
         ll.remonvefirst();
+        ll.print();
+        ll.removelast();
         ll.print();
 
 
