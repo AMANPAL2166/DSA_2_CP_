@@ -132,6 +132,18 @@ public class Linked_List {
 
         return val;
     }
+    public int itrSearch(int key){
+        Node temp = head;
+        int i  =0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp  = temp.next;
+            i++;
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
@@ -148,6 +160,7 @@ public class Linked_List {
         ll.print();
         ll.removeLast();
         ll.print();
+        System.out.println("Search index "+ll.itrSearch(3));
 
 
     }
