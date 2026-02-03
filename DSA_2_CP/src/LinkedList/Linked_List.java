@@ -2,6 +2,8 @@ package LinkedList;
 
 //import static jdk.internal.jrtfs.JrtFileAttributeView.AttrID.size;
 
+
+
 public class Linked_List {
     public static class Node{
         int data;
@@ -144,6 +146,30 @@ public class Linked_List {
         }
         return -1;
     }
+    public void deletenthfromlast(int n){
+        Node temp = head;
+        int size = 0;
+        while(temp != null){
+            size++;
+            temp = temp.next;
+
+        }
+        if(size == n){
+            head = head.next;
+            return;
+        }
+        //size-n;
+        int i  =1;
+        int iTofind = size-n;
+        Node prev = head;
+        while(i <iTofind){
+            prev = prev.next;
+
+        }
+        prev.next = prev.next.next;
+        return;
+
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
@@ -161,6 +187,8 @@ public class Linked_List {
         ll.removeLast();
         ll.print();
         System.out.println("Search index "+ll.itrSearch(3));
+        ll.deletenthfromlast(2);
+        ll.print();
 
 
     }
