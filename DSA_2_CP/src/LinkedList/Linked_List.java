@@ -187,7 +187,9 @@ public class Linked_List {
         ll.removeLast();
         ll.print();
         System.out.println("Search index "+ll.itrSearch(3));
-        ll.deletenthfromlast(2);
+        int n = 2;
+        System.out.print ("Remove "+n+"th node ::::");
+        ll.deletenthfromlast(n);
         ll.print();
 
 
