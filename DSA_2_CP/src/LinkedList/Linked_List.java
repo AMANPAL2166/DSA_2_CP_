@@ -170,6 +170,16 @@ public class Linked_List {
         return;
 
     }
+    //Here we use slow fast pointer
+    public Node findMid(Node data){
+        Node slow = head;
+        Node fast = head;
+        while(fast  != null && fast.next !=null){
+            slow = slow.next;
+            fast  = fast.next.next;
+        }
+        return slow;//slow is my middle
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
