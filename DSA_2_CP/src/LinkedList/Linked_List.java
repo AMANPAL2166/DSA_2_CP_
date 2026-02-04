@@ -180,6 +180,35 @@ public class Linked_List {
         }
         return slow;//slow is my middle
     }
+    public boolean checkPalindrome(){
+        if(head == null || head.next != null){
+            return true;
+        }
+        //step 1:- find mid of the list
+        Node midnode  = findMid( head);
+        //step 2:- reverse 2nd half
+        Node prev= null;
+        Node curr = midnode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node right = prev;//right half head
+        Node left = head;
+        //check left and right half
+        while(right!= null){
+            if(left.data != right.data){
+                return false;
+            }else {
+                left=left.next;
+                right = right.next;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
