@@ -19,11 +19,27 @@ public class SubarrayProLessthanK {
         return count;
     }//Two pointer
     public static int numSubarray(int[] nums, int k){
+        //Base case
+        if(k<1){
+            return 0;
+        }
+        int count = 0;
+        int left = 0;
+        int pro = 1;
+        for(int start = 0; start<nums.length;start++){
+            pro *= nums[start];
+            while(pro>=k){
+                pro/=nums[left];
+                left++;
+            }
+            count += (start - left+1);
+        }
+        return count;
 
     }
 
     public static void main(String[] args) {
         int[] arr= {10,5,2,6};
-        System.out.println(numSubarrayProductLessThanK(arr,100));
+        System.out.println(numSubarray(arr,100));
     }
 }
