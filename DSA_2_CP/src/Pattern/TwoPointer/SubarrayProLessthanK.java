@@ -17,6 +17,9 @@ public class SubarrayProLessthanK {
             }
         }
         return count;
+    }//Two pointer
+    public static int numSubarray(int[] nums, int k){
+
     }
 
     public static void main(String[] args) {
