@@ -209,6 +209,19 @@ public class Linked_List {
         }
         return true;
     }
+    //____Check cycle of linkedlist_______
+    public boolean isCycle(){
+        Node slow = head;
+        Node  fast = head;
+        while(fast != null && fast.next !=null ){
+            slow = slow.next;//+1
+            fast = fast.next;//+2;
+            if(slow == fast){//cycle exist
+                return true;
+            }
+        }
+        return false;//cycle doesn't exist.
+    }
 
     public static void main(String[] args) {
         Linked_List ll = new Linked_List();
