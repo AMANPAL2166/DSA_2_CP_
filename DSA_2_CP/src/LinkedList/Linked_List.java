@@ -210,7 +210,7 @@ public class Linked_List {
         return true;
     }
     //____Check cycle of linkedlist_______
-    public boolean isCycle(){
+    public boolean isCycle(){//Floyd's cycle finding algorithm
         Node slow = head;
         Node  fast = head;
         while(fast != null && fast.next !=null ){
