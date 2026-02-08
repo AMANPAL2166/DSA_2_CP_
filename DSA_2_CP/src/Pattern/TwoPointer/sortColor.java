@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class sortColor {
     public static void sortColors(int[] nums) {
+        //Although this is working method but not recomment on interview:::::
         int[] ans = new int[nums.length];
         int idx  = 0;
         for(int i = 0; i<nums.length;i++){
