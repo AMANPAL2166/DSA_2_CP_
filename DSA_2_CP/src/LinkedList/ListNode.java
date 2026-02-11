@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class FindNthFromLast {
+public class ListNode {
     static class Node{
         int data;
         Node next;
