@@ -3,7 +3,7 @@ package Recurssion;
 public class CalculatePower {
     public static void main(String[] args) {
         int n = 10, s =2;
-        System.out.println(cal1(n, 8));
+        System.out.println(cal1(n, 2));
 
     }
 
