@@ -16,10 +16,22 @@ public class peakElement {
         return start;
 
     }
+    public static int peakBrute(int[] nums){
+        int n= nums.length;
+        //run the loop till the n-1
+        for(int i = 0;i<nums.length-1 ;i++){
+            if(nums[i] > nums[i+1]){
+                return i;
+            }
+
+        }
+        return n-1;
+    }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,3,1};
-        System.out.println(findPeakElement(nums));
+        int[] nums = {1,2,3,9};
+        System.out.println("Binary search: "+findPeakElement(nums));
+//        System.out.println("Brute: "+ peakBrute(nums));
 
     }
 }
