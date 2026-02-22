@@ -10,9 +10,9 @@ public class Binaraysearch {
                 return mid;
             }
             if(nums[mid] > target){
-                right--;
+                right = mid-1;
             }else {
-                left++;
+                left = mid+1;
             }
         }
         return -1;
