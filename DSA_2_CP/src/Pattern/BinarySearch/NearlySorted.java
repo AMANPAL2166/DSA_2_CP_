@@ -10,7 +10,7 @@ public class NearlySorted {
                 return mid;
             } else if (mid-1>=start && arr[mid+1] == target) {
                 return mid+1;
-            } else if (mid+1 <= end && arr[mid-1] == target) {
+            } else if (mid+1 <= end && arr[mid+1] == target) {
                 return mid-1;
             }
             if(arr[mid] > target){
