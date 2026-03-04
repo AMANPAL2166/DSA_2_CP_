@@ -38,4 +38,6 @@ public class specialMatrix {
         };
         System.out.println(numSpecial(mat));
     }
+
+
 }
