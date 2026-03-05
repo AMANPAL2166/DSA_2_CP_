@@ -3,13 +3,17 @@ package Daily_Question;
 public class MinChange {
     public static int minOperations(String s) {
         int count = 0;
-        for(int i = 1;i<s.length();i++){
-            if(s.charAt(i) == s.charAt(i-1)){
-                count++;
+        int n= s.length();
+        for(int i = 1;i<n;i++){
+
+            if(n%2 == 0){
+                if(s.charAt(i) !='0')count++;
+            }else{
+                if(s.charAt(i) != '1')count++;
             }
-            i++;
+
         }
-        return count;
+        return Math.min(count,n-count);
 
     }
 
