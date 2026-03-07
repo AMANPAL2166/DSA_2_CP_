@@ -37,6 +37,7 @@ public class NextGreaterFirst {
             st.push(nums2[i]);
         }
 
+
     }
 
     public static void main(String[] args) {
