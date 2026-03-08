@@ -61,7 +61,7 @@ public class NextGreaterFirst {
     public static void main(String[] args) {
         int[] nums1  = {4,1,2};
         int[] nums2 = {1,3,4,2};
-        System.out.println(nextGreaterElement(nums1,nums2));
+        //System.out.println(nextGreaterElement(nums1,nums2));
         System.out.println(nextGreaterOPT(nums1,nums2));
     }
 }
