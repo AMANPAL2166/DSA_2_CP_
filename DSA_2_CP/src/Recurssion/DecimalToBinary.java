@@ -18,6 +18,22 @@ public class DecimalToBinary {
         }
         System.out.println("Decimal- "+ decimal);
         System.out.println("Binary- "+ binaryNumber);
+        System.out.println("Recursion solution: "+decToBin(decimal));
+        System.out.println("Recursion solution_2 : "+decToBin2(decimal));
+
+    }
+    public static String decToBin(int d){
+        if(d>1){
+            return decToBin(d/2)+decToBin(d%2);
+        }
+        return String.valueOf(d);
+    }
+    public static int decToBin2(int d){
+        if(d==0){
+            return 0;
+        }else{
+            return (d%2+10 * decToBin2(d/2));
+        }
 
     }
 }
