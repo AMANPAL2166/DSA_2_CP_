@@ -11,11 +11,11 @@ public class zig_zag {
         if(num == 0){
             return ;
         }
-        System.out.println("Line 1st: "+num);
+        System.out.println("Pre: "+num);
         zig(num-1);
-        System.out.println("Line 2nd: "+num);
+        System.out.println("In: "+num);
         zig(num-1);
-        System.out.println("Line 3rd: " + num);
+        System.out.println("Post: " + num);
 
     }
 }
