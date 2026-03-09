@@ -31,7 +31,7 @@ public class BuildTreePreorder {
     }
 
     public static void main(String[] args) {
-        int node[] = {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
+        int node[] = {9,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(node);
         System.out.println(root.data);
