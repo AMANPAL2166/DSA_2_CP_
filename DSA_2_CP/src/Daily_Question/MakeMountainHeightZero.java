@@ -98,4 +98,6 @@ public class MakeMountainHeightZero {
         }
         return totalReduced >= targetHeight;
     }
+
+
 }
