@@ -2,7 +2,7 @@ package Recurssion;
 
 public class FirstOccurance {
     public static int firstOccurance(int[] arr, int tar, int idx) {
-        /// This method is good but not best, becoz we can get of target before second iteration. Write 2nd method below.
+        /// This method is good but not best, becoz we can get target before second iteration. Write 2nd method below.
         if(idx == arr.length){
             return -1;
         }
