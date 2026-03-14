@@ -1,6 +1,6 @@
 package Recurssion;
 
-public class isPoweroftwo {
+public class  isPoweroftwo {
     public static void main(String[] args) {
         int n = 30;
 //        System.out.println(isPowerOfTwo_(n));
