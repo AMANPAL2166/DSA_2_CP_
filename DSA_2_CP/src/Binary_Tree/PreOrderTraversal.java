@@ -20,7 +20,8 @@ public class PreOrderTraversal {
             return;
         }
         //visit the current node first
-        res.add(node.data);
+        System.out.println(res.add(node.data));
+
         //traverse the left subtree
         PreOrder(node.left, res);
         //traverse the right subtree
