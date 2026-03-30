@@ -1,7 +1,8 @@
 package MultiDimensionArray;
 
 public class Transpose {
-    public static void main(int[][] arr) {
+    public static void main(String[] args) {
+        int[][] arr = {{2,3,4,5}, {4,5,6,1}, {1,3,2,5}, {1,5,3,7}};
         print(arr);
         for(int i = 0;i<arr.length;i++){
             for(int j = 0;j<i;j++){
