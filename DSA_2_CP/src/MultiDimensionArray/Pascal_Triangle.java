@@ -26,4 +26,29 @@ public class Pascal_Triangle {
         return ans;
 
     }
+    public List<List<Integer>> generate_(int numRows) {
+
+            List<List<Integer>> ans = new ArrayList<>();
+            //first fill all the array with 1
+            for(int i = 0;i<numRows;i++){
+                List<Integer> list = new ArrayList<>();
+                for(int j =0;j<i;j++){
+                    list.add(  1);
+                }
+                ans.add(list);
+            }
+            for(int i = 0;i<numRows;i++){
+                for(int j = 0;j<i;j++){
+                    if(j==0 || j==i) ans.get(i).set(j,1);
+                    else {
+                        int val = ans.get(i-1).get(j) + ans.get(i-1).get(j-1);
+                        ans.get(i).set(j,val);
+                    }
+                }
+            }
+            return ans;
+
+
+
+    }
 }
