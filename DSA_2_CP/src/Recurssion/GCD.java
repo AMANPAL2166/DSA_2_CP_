@@ -25,10 +25,10 @@ public class GCD {
 
 
     public static void main(String[] args) {
-        int a = 48, b = 18;
-        System.out.println(gcd(a,b));
-        System.out.println(gcd_(a,b));
-        System.out.println("Recursive method: " + gcd__(a,b));
+        int a = 16, b = 38;
+//        System.out.println(gcd(a,b));
+//        System.out.println(gcd_(a,b));
+        System.out.println("Recursive method: " + helper(a,b));
     }
     //recursive code
     public static int gcd__(int a, int b) {
