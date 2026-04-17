@@ -4,24 +4,28 @@ import java.util.Arrays;
 
 public class SortAnArray {
     public static void mergeSort(int[] nums) {
-        int n= nums.length;
+         int n = nums.length;
         //base case
         if(n==1) return;
+
         //Step 1: Create 2 empty array
-        int[] a= new int[n/2];
-        int[] b = new int[n-n/2];
+        int[] a = new int[n/2];
+        int[] b= new int[n-n/2];
+
         //Step 2: Copy paste arr into a and b
         int idx = 0;
-        for(int i = 0;i<a.length;i++) {
+        for(int i =0;i<a.length;i++ ){
             a[i] = nums[idx++];
         }
-        for(int j = 0;j<b.length;j++){
+        for(int  j= 0;j<b.length;j++ ){
             b[j] = nums[idx++];
         }
+
         //Step 3: Magic
         mergeSort(a);
         mergeSort(b);
         add(a,b,nums);
+
     }
     public static void add(int[] a, int[] b, int[] add) {
         int i = 0, j = 0, k = 0;
