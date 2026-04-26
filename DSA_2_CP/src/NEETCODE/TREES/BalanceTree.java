@@ -32,4 +32,9 @@ public class BalanceTree {
         return 1+Math.max(left, right);
 
     }
+
+    public static int size(TreeNode root) {
+        return (root == null)? 0: 1+ size(root.left) + size(root.right);
+    }
+
 }
