@@ -3,7 +3,7 @@ package Searching;
 public class Single_element {
     public static void main(String[] args) {
         int[] nums = {1,2,2,3,3};
-        System.out.println(singleNonDuplicate2(nums));
+        System.out.println("Ans: "+singleNonDuplicate2(nums));
 
     }
 
