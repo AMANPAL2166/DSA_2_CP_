@@ -18,6 +18,15 @@ public class LevelOrder {
         if(root ==null ){
             return;
         }
+        //ADd a new label to the result if needed
+        if(res.size() <= level){
+            res.add(new ArrayList<>());
+        }
+        //Add current node data to it's corresponding level
+        res.get(level).add(root.data);
+        //Recure for left and right children
+        traversal(root.left, level+1, res);
+        traversal(root.right, level+1, res);
 
 
     }
