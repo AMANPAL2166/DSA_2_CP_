@@ -18,7 +18,7 @@ public class LevelOrder {
         if(root ==null ){
             return;
         }
-        //ADd a new label to the result if needed
+        //ADd a new level to the result if needed
         if(res.size() <= level){
             res.add(new ArrayList<>());
         }
@@ -59,6 +59,8 @@ public class LevelOrder {
 
 
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+
+        traversal(root, 0, res);
 
         for (ArrayList<Integer> level : res) {
             for (int val : level) {
