@@ -34,5 +34,7 @@ public class symettric {
         symettric s = new symettric();
         System.out.println(s.isSymmetric(root));
 
+
+
     }
 }
