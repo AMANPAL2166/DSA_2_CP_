@@ -33,5 +33,6 @@ public class symettric {
         root.right.right = new TreeNode(3);
         symettric s = new symettric();
         System.out.println(s.isSymmetric(root));
+
     }
 }
