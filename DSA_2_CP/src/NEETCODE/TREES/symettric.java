@@ -31,7 +31,7 @@ public class symettric {
         root.left.right = new TreeNode(4);
         root.right.left = new TreeNode(4);
         root.right.right = new TreeNode(3);
-        root.right.left = new TreeNode(3);
+        root.right.left = new TreeNode(99);
         symettric s = new symettric();
         System.out.println(s.isSymmetric(root));
 
