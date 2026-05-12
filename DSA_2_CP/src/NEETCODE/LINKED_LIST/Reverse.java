@@ -13,7 +13,7 @@ public class Reverse {
         ListNode prev = null;
         ListNode front = null;
         while(temp!= null){
-            //stroring previous link
+            //storing previous link
             front = temp.next;
             temp.next = prev;
             //move pointer to the next
