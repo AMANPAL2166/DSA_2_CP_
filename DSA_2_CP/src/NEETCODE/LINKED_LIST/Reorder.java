@@ -27,7 +27,7 @@ public class Reorder {
 //        return newarr;
 //
 //    }
-public void reorderList(ListNode head) {
+public static void reorderList(ListNode head) {
     if(head == null) return;
     //Step 1: Find the middle of the list
     ListNode slow = head, fast = head;
@@ -58,13 +58,13 @@ public void reorderList(ListNode head) {
         second = temp2;
     }
 }
-//
-//    public static void main(String[] args) {
-//        int[] arr = {1,2,3,4,5,6,7};
-//        int[] ans = reOrder(arr);
-//        for(int a: ans){
-//            System.out.println(a + " ");
-//        }
-//    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,3,4,5,6,7};
+        //int[] ans = reorderList(arr);
+      //  for(int a: ans){
+      //      System.out.println(a + " ");
+       // }
+    }
 
 }
