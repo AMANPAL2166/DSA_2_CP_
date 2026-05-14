@@ -26,6 +26,7 @@ public class LevelOrder {
         TreeNode n4 = new TreeNode(4);
         TreeNode n5 = new TreeNode(5);
         TreeNode n6 = new TreeNode(6);
+        TreeNode n7 = new TreeNode(7);
 
         // Constructing tree
         root.left = n2; // Node(2)
@@ -34,6 +35,10 @@ public class LevelOrder {
         // Second level
         n2.left = n4; // Node(4)
         n2.right = n5; // Node(5)
+
+        //Third Level
+        n4.left = n6;
+        n4.right = n7;
     }
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
