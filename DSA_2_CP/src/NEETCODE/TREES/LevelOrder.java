@@ -24,7 +24,8 @@ public class LevelOrder {
         TreeNode n2 = new TreeNode(2);
         TreeNode n3 = new TreeNode(3);
         TreeNode n4 = new TreeNode(4);
-        TreeNode n5 = new TreeNode(5);  
+        TreeNode n5 = new TreeNode(5);
+        TreeNode n6 = new TreeNode(6);
 
         // Constructing tree
         root.left = n2; // Node(2)
