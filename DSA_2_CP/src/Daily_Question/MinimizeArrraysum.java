@@ -27,6 +27,8 @@ public class MinimizeArrraysum {
     public static void main(String[] args) {
         int[] a  = {3, 6, 2};
         System.out.println(minArraySum(a));
+        System.out.println(minArraySum(a));
+
     }
 
 }
