@@ -9,6 +9,7 @@ public class Map_Framework {
         mp.put("One", 1);
         mp.put("Two", 2);
         mp.put("One", 1);
+        mp.remove("One", 1);
         System.out.println("All maps with their key: "+ mp);
     }
 }
