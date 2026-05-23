@@ -1,7 +1,7 @@
 package LinkedList;
 
 public class IntersectionOfTwoLinkedLIst {
-    public class ListNode{
+    public static class ListNode{
         int val;
         ListNode next;
         ListNode(int data){
@@ -21,6 +21,8 @@ public class IntersectionOfTwoLinkedLIst {
     }
 
     public static void main(String[] args) {
-        
+        ListNode li = new ListNode(1);
+
+
     }
 }
