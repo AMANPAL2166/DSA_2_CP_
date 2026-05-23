@@ -22,6 +22,7 @@ public class IntersectionOfTwoLinkedLIst {
 
     public static void main(String[] args) {
         ListNode li = new ListNode(1);
+        li = new ListNode(2);
 
 
     }
