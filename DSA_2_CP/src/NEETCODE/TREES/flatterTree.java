@@ -26,4 +26,8 @@ public class flatterTree {
 
     }
 
+    public static void main(String[] args) {
+
+    }
+
 }
