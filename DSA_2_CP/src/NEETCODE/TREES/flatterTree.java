@@ -5,10 +5,10 @@ public class flatterTree {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode(int val,  TreeNode left, TreeNode right){
+        TreeNode(int val){
             this.val = val;
-            this.left = left;
-            this.right = right;
+            this.left = null;
+            this.right = null;
         }
     }
     public static void flatten(TreeNode root) {
@@ -27,6 +27,7 @@ public class flatterTree {
     }
 
     public static void main(String[] args) {
+        TreeNode n = new TreeNode(1);
 
     }
 
