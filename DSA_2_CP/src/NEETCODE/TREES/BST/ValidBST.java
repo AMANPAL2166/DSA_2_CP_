@@ -1,5 +1,7 @@
 package NEETCODE.TREES.BST;
 
+import java.util.Stack;
+
 public class ValidBST {
     public class TreeNode {
       int val;
@@ -61,5 +63,33 @@ public class ValidBST {
 //
 //        return new Twin(max, min);
 //    }
+    ///  Method first java iterative with a stack
+    public boolean isValidBST_3(TreeNode root){
+        if(root == null) return true;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = root;
+        TreeNode prev = null;//Keep track of the previosly visited node
+        while(curr != null || !stack.isEmpty()){
+            //1. Go to the leftMost node
+            while(curr != null){
+                stack.push(curr);
+                curr = curr.left;
+
+            }
+            // 2. Process the node
+            curr = stack.pop();
+            //If the current node value is not strictly greater than the previous, it's invalid
+            if(prev != null && curr.val <= prev.val){
+                return false;
+            }
+            prev = curr;//Update the previous node
+
+            //3. Move to the right subtree
+            curr = curr.right;
+
+        }
+        return true;
+
+    }
 
 }
