@@ -1,9 +1,7 @@
 package NEETCODE.TREES.BST;
 
-
-
 public class MaxBSTSum {
-    class TreeNode{
+     static class TreeNode{
         int val;
         TreeNode left;
         TreeNode right;
@@ -12,8 +10,8 @@ public class MaxBSTSum {
             left = right = null;
         }
     }
-    int maxSum = 0;
-    class Info{
+    static int maxSum = 0;
+    static class Info{
         boolean isBST;
         int min;
         int max;
@@ -27,11 +25,11 @@ public class MaxBSTSum {
 
 
     }
-    public int maxSunbst(TreeNode root){
+    public  static   int maxSumBST(TreeNode root){
         dfs(root);
         return maxSum;
     }
-    private Info dfs(TreeNode node) {
+    private static   Info dfs(TreeNode node) {
 
         if (node == null) {
             return new Info(
@@ -76,5 +74,17 @@ public class MaxBSTSum {
                 Integer.MAX_VALUE,
                 0
         );
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(4);
+
+        root.left = new TreeNode(3);
+        root.right = new TreeNode(8);
+
+        dfs(root);
+
+        System.out.println("Max Sum = " + maxSum);
+
     }
 }
