@@ -75,8 +75,7 @@ public class reverse {
         list = reverse2(list);
         System.out.println();
         print(list);
-
-
+        System.out.println();
     }
 
 }
