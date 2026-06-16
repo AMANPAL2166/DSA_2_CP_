@@ -60,6 +60,5 @@ public class Contestj {
         for( int i : ans){
             System.out.print(ans[i] + " ");
         }
-
     }
 }
