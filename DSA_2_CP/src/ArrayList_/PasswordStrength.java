@@ -46,6 +46,7 @@ public class PasswordStrength {
             else {
                 hasSpecial = true;
             }
+
         }
         int score = 0;
         if(hasUpeer) score += 2;
