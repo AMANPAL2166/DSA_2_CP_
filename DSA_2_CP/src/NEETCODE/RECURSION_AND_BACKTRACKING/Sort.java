@@ -53,33 +53,45 @@ public class Sort {
         //push remove element
         st.push(val);
     }
+    private static void printArray(int[] arr, int n){
+        //Base case
+        if(n==0) return;
+
+        //Hypothesis
+        printArray(arr,n-1);
+
+        //Induction
+        System.out.print(arr[n-1]+" ");
+    }
     public static void main(String[] args){
 
-        Stack<Integer> st = new Stack<>();
+//        Stack<Integer> st = new Stack<>();
+//
+//        st.push(5);
+//        st.push(1);
+//        st.push(3);
+//        st.push(2);
+//
+//        System.out.println("Before: " + st);
+//
+//        sort(st);
+//
+//        System.out.println("After : " + st);
 
-        st.push(5);
-        st.push(1);
-        st.push(3);
-        st.push(2);
-
-        System.out.println("Before: " + st);
-
-        sort(st);
-
-        System.out.println("After : " + st);
-
-        ArrayList<Integer> arr = new ArrayList<>();
-
-        arr.add(5);
-        arr.add(1);
-        arr.add(3);
-        arr.add(2);
-
-        System.out.println("Before: " + arr);
-
-        sortArray(arr);
-
-        System.out.println("After : " + arr);
+//        ArrayList<Integer> arr = new ArrayList<>();
+//
+//        arr.add(5);
+//        arr.add(1);
+//        arr.add(3);
+//        arr.add(2);
+//
+//        System.out.println("Before: " + arr);
+//
+//        sortArray(arr);
+//
+//        System.out.println("After : " + arr);
+        int[] nums = {2, 3, 1, 42};
+        printArray(nums,4);
     }
 
 }
