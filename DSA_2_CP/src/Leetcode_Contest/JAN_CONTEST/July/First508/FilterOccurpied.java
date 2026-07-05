@@ -1,4 +1,4 @@
-package Leetcode_Contest.JAN_CONTEST.July.First;
+package Leetcode_Contest.JAN_CONTEST.July.First508;
 ///  Q2. Filter Occupied Intervals
 /// Medium
 /// 4 pt.

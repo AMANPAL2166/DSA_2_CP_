@@ -1,4 +1,4 @@
-package Leetcode_Contest.JAN_CONTEST.July.First;
+package Leetcode_Contest.JAN_CONTEST.July.First508;
 /// Q1. Maximum Total Sum of K Selected Elements
 /// Attempted
 /// Medium

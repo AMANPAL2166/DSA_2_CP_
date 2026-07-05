@@ -1,6 +1,5 @@
-package Leetcode_Contest.JAN_CONTEST.July.First;
+package Leetcode_Contest.JAN_CONTEST.July.First508;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 /// /Q3. Maximum Subarray Sum After Multiplier
 /// Medium
