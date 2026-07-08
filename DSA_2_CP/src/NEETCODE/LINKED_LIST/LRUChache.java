@@ -2,7 +2,7 @@ package NEETCODE.LINKED_LIST;
 
 import java.util.HashMap;
 
-public class LRYchache {
+public class LRUChache {
     static class Node{
         int key, val;
         Node prev, next;
