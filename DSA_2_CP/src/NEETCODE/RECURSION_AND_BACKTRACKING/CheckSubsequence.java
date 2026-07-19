@@ -18,5 +18,7 @@ public class CheckSubsequence {
     public static void main(String[] args) {
         int[] nums = {1,2,3};
         System.out.println(checkSub(nums, 3));
+
+
     }
 }
