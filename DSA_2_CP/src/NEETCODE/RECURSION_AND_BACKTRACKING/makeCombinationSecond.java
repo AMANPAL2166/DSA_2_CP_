@@ -19,22 +19,19 @@ public class makeCombinationSecond {
             return;
         }
         //iterate to the loop start from index
-        for(int i = ind;i<candidates.length;i++){
-            // Skip duplicates to avoid repeating combinations
-            if (i > ind && candidates[i] == candidates[i - 1]) continue;
+         for(int i = ind;i<candidates.length;i++){
+             //skip duplicates
+             if(i>0 && candidates[i] == candidates[i-1]) continue;
+             //if current element is greater than target
+             if(candidates[i]> target) break;
+             //Include the current ele
+             currentCombination.add(candidates[i]);
+             //recure with the updated
+             backtrack(candidates, target-candidates[i], ans , i+1,currentCombination );
+             //backtrack by removing the last added element
+             currentCombination.remove(currentCombination.size()-1);
 
-            // If the current element is greater than the remaining target, break the loop
-            if (candidates[i] > target) break;
-
-            // Include the current element in the combination
-            currentCombination.add(candidates[i]);
-
-            // Recur with the updated target and next index (i + 1 to avoid repetition)
-            backtrack(candidates, target - candidates[i], ans, ind+1, currentCombination);
-
-            // Backtrack by removing the last added element
-            currentCombination.remove(currentCombination.size() - 1);
-        }
+         }
 
     }
 }
