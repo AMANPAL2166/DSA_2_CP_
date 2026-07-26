@@ -34,4 +34,8 @@ public class makeCombinationSecond {
          }
 
     }
+
+    public static void main(String[] args) {
+        int[] candidate  = {1,2,3,4};
+    }
 }
