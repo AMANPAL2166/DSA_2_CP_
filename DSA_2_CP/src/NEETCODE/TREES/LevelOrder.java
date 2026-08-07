@@ -1,9 +1,6 @@
 package NEETCODE.TREES;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.*;
 
 public class LevelOrder {
     static class  Node {
@@ -83,6 +80,25 @@ public class LevelOrder {
                     System.out.print(val + " ");
                 }
                 System.out.println();
+            }
+        }
+        public static void levelOrderTraversal(TreeNode root){
+            Queue<TreeNode> treeNodeQueue = new LinkedList<>();
+            //Start with first node
+            treeNodeQueue.add(root);
+            //Run while loop till the queue isn't empty.
+            while (!treeNodeQueue.isEmpty()){
+                TreeNode treeNode = treeNodeQueue.poll();
+                //Print the value
+                System.out.println(treeNode.val +" -> ");
+                //Add left child
+                if(treeNode.left != null){
+                    treeNodeQueue.add(treeNode.left);
+                }
+                //add right child
+                if(treeNode.right != null){
+                    treeNodeQueue.add(treeNode.left);
+                }
             }
         }
     }
