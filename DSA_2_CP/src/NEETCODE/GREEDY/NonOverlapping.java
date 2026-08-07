@@ -1,24 +1,23 @@
 package NEETCODE.GREEDY;
 
+import java.util.Arrays;
+
 public class NonOverlapping {
     public static int overlapCount(int[][] intervals){
-        //int startTime = 0;
-        int endTime = 0;
-        int count = 0;
-        int intervalLen = intervals.length;
-       // int intevalIthLen = intervals[0].length;
-        for(int i = 0;i<intervalLen;i++){
-             if(intervals[i][0] <endTime  ){
-                 count++;
+        int res = 0;
 
-             }else{
-                 if(endTime < intervals[i][1]){
-                     endTime = intervals[i][1];
-                 }
+        Arrays.sort(intervals, (a, b) -> a[1] - b[1]);
+        int prev_end = intervals[0][1];
 
-             }
+        for (int i = 1; i < intervals.length; i++) {
+            if (prev_end > intervals[i][0]) {
+                res++;
+            } else {
+                prev_end = intervals[i][1];
+            }
         }
-        return count;
+
+        return res;
 
     }
 
