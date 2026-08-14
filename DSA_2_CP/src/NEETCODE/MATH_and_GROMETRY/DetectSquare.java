@@ -3,6 +3,8 @@ package NEETCODE.MATH_and_GROMETRY;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Math.log10;
+
 public class DetectSquare {
     class DetectSquares {
         int[][] cnt = new int[1001][1001];
@@ -33,6 +35,24 @@ public class DetectSquare {
             }
             return res;
         }
+    }
+
+    public static void main(String[] args) {
+        int n = 121;
+        int givenN = n;
+        //reverse a number
+        int reverseNum = 0;
+        while(n>0){
+            int lastDigit=n%10;
+            n = n/10;
+            reverseNum = (reverseNum * 10) + lastDigit;
+        }
+        System.out.println(n);
+        System.out.println(reverseNum);
+
+        System.out.println(reverseNum != givenN);
+
+
     }
 
 }
