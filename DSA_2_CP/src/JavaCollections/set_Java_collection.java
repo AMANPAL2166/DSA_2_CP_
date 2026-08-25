@@ -1,4 +1,4 @@
-package ArrayList_;
+package JavaCollections;
 
 import java.util.Set;
 import java.util.TreeSet;
