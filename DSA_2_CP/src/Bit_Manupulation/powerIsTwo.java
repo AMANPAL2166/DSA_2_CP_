@@ -1,4 +1,4 @@
-package Bitmanupulation;
+package Bit_Manupulation;
 
 public class powerIsTwo {
     public static boolean powerCheck(int n) {

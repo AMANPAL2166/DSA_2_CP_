@@ -1,4 +1,4 @@
-package ArrayList_;
+package JavaCollections;
 
 import java.util.HashMap;
 import java.util.Set;

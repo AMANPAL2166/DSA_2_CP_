@@ -1,4 +1,4 @@
-package Bitmanupulation;
+package Bit_Manupulation;
 
 public class countSetsOfBits {
     public static int countset(int n) {

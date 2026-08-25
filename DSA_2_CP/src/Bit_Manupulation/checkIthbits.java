@@ -1,4 +1,4 @@
-package Bitmanupulation;
+package Bit_Manupulation;
 
 public class checkIthbits {
     //time and space both have o(log n) complexity

@@ -1,6 +1,5 @@
-package ArrayList_;
+package JavaCollections;
 
-import java.lang.reflect.Array;
 import java.util.HashSet;
 
 public class PasswordStrength {
