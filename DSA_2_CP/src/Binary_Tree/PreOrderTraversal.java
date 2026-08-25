@@ -1,6 +1,7 @@
 package Binary_Tree;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class PreOrderTraversal {
     static class Node{
@@ -27,6 +28,25 @@ public class PreOrderTraversal {
         //traverse the right subtree
         PreOrder(node.right, res);
 
+
+    }
+
+    public static void PreOrderIterate(Node node, ArrayList<Integer> ans) {
+        //base case
+        if(node ==null ) return;
+        //create a stack
+        Stack<Node> st = new Stack<>();
+        st.push(node);
+        while (!st.isEmpty()){
+            Node nodee =  st.pop();
+            ans.add(node.data);
+            if(node.right!= null){
+                st.push(node.right);
+            }
+            if(node.left != null){
+                st.push(node.left);
+            }
+        }
 
     }
 
