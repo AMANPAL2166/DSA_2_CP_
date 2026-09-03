@@ -1,6 +1,8 @@
 package Binary_Tree;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
 public class InorderTraversal {
     //NOde Structure
@@ -29,6 +31,28 @@ public class InorderTraversal {
 
     }
 
+    public static void Inorder(Node root) {
+        //make stack and list
+        Stack<Node> st = new Stack<>();
+        List<Integer> inorder = new ArrayList<>();
+        Node node= root;
+        while(true){
+            if(node != null){
+                st.push(node.left);
+                node = node.left;
+            }else{
+                if(st.isEmpty()){
+                    break;
+                }else{
+                    node = st.pop();
+                    inorder.add(node.data);
+                    node  = node.right;
+                }
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         /// Create binary tree
         //       1
@@ -43,7 +67,7 @@ public class InorderTraversal {
         root.left.right = new Node(5);
         root.right.right = new Node(6);
         ArrayList<Integer> res = new ArrayList<>();
-        inOrder(root,res);
+        Inorder(root );
         for(int node: res){
             System.out.println(node + " ");
         }

@@ -30,6 +30,24 @@ public class LevelOrder {
 
     }
 
+//    public static void levelTraversal(Node root) {
+//        //Create a queue to store val
+//        Queue<Integer> TreeQueue = new Queue<>();
+//        TreeQueue.add(root);
+//        //Run while till the queue is not empty
+//        while(!TreeQueue.isEmpty()) {
+//            Node treeNode = TreeQueue.poll();
+//            //print the value
+//            System.out.println(treeNode.data +"->");
+//            //Add left child to the queue
+//            if(treeNode.left != null){TreeQueue.add(treeNode.left);}
+////            if(treeNode.right != null){TreeQueue.add(treeNode.right);}
+//
+////
+//        }
+//    }
+
+
     public static void main(String[] args) {
         //      5
         //     / \
