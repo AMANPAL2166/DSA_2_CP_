@@ -52,6 +52,8 @@ public class PreInPostTraversal {
         preOrd.add(root.data);
     }
 
+
+
     public static void main(String[] args) {
         // Creating a sample binary tree
         Node root = new Node(1);

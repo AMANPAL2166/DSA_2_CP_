@@ -39,12 +39,12 @@ public class PreOrderTraversal {
         st.push(node);
         while (!st.isEmpty()){
             Node nodee =  st.pop();
-            ans.add(node.data);
-            if(node.right!= null){
-                st.push(node.right);
+            ans.add(nodee.data);
+            if(nodee.right!= null){
+                st.push(nodee.right);
             }
-            if(node.left != null){
-                st.push(node.left);
+            if(nodee.left != null){
+                st.push(nodee.left);
             }
         }
 
@@ -64,7 +64,7 @@ public class PreOrderTraversal {
         root.left.right = new Node(5);
         root.right.right = new Node(6);
         ArrayList<Integer> reult = new ArrayList<>();
-        PreOrder(root,reult);
+        PreOrderIterate(root,reult);
         for(int val: reult){
             System.out.println(val + " ");
         }

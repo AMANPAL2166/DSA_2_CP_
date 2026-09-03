@@ -1,6 +1,9 @@
 package Binary_Tree;
 
 import java.util.ArrayList;
+import java.util.Stack;
+
+//import static NEETCODE.TREES.PreOrderTraversal.ans;
 
 public class PostOrderTraversal {
     static class Node{
@@ -24,6 +27,28 @@ public class PostOrderTraversal {
         postOrder(node.right, res);
         //now we visit node;
         res.add(node.data);
+
+    }
+
+    public static void PostOrder(Node root) {
+        //solve using 2 stackj
+        ArrayList<Integer> ans=new ArrayList<>();
+        if(root == null){
+            return ;
+        }
+        Stack<Node> st1 = new Stack<>();
+        Stack<Node> st2 = new Stack<>();
+
+        st1.push(root);
+        while(!st1.isEmpty()){
+            root = st1.pop();
+            st2.push(root);
+            if(root.left != null) st1.push(root.left);
+            if(root.right != null) st1.push(root.right);
+        }
+        while(!st2.isEmpty()){
+            ans.add(st2.pop().data);
+        }
 
     }
 
