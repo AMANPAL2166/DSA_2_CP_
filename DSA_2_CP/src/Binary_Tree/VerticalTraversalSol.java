@@ -1,7 +1,11 @@
 package Binary_Tree;
 
+import LinkedList.Basics.Linkedlist;
+
+import java.util.*;
+
 public class VerticalTraversalSol {
-    class Node{
+    static class Node{
         int data;
         Node left;
         Node right;
@@ -11,7 +15,7 @@ public class VerticalTraversalSol {
         }
     }
     //make class for pair
-    class Pair{
+    static class Pair{
         Node node;
         int vertical;
         int level;
@@ -22,16 +26,17 @@ public class VerticalTraversalSol {
         }
     }
     public static List<List<Integer>> verticalTraversal(Node root){
+        List<List<Integer>> ans = new ArrayList<>();
         //use treee map to store the vertical level mapping
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> nodes = new TreeMap();
         //Queue for BFS
-        Queue<Pair> todo = new Linkedlist<>();
+        Queue<Pair> todo = new LinkedList<>();
         todo.add(new Pair(root,0,0));
         //perform BFS
-        while (!todo.isEmpty()){
+        while (!todo.isEmpty()) {
             Pair p = todo.poll();
             Node temp = p.node;
-            int x= p.vertical;
+            int x = p.vertical;
             int y = p.level;
             // Add node value to map
             nodes.putIfAbsent(x, new TreeMap<>());
@@ -46,9 +51,9 @@ public class VerticalTraversalSol {
             // If right child exists, push to queue
             if (temp.right != null) {
                 todo.offer(new Pair(temp.right, x + 1, y + 1));
-        }
+            }
             // Final answer
-            List<List<Integer>> ans = new ArrayList<>();
+
 
             // Iterate through map to build result
             for (TreeMap<Integer, PriorityQueue<Integer>> ys : nodes.values()) {
@@ -60,7 +65,7 @@ public class VerticalTraversalSol {
                 }
                 ans.add(col);
             }
-
-            return ans;
+        }
+        return ans;
     }
 }
